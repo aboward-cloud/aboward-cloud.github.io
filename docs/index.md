@@ -7,11 +7,11 @@ tags:
 <center>
 <font size= "6">Zander Datasheet</font><br>
 as part of<br>
-<font size= "8"> Project Name</font><br>
+<font size= "8"> Setting up Git, Github & Datasheet</font><br>
 for<br>
-<font size= "5"> Team ### </font><br>
+<font size= "5"> Team 202 </font><br>
 
-**Submission: month, DD, YYYY**
+**Submission: September, 09, 2026**
 </center>
 
 ## Introduction
