@@ -1,5 +1,6 @@
 ---
 title: Individal Block Diagram
+glightbox: false
 tags:
 - tag1
 - tag2
