@@ -17,7 +17,7 @@ A power budget ensures that a systems power supply and voltage regulators are qu
 
 ## Conclusions
 
-From the prepare Power Budget, .....
+The selected power supply and regulators provide sufficient current with a 25% safety margin, based on the preliminary estimates.
 
 ## Resouces
 
