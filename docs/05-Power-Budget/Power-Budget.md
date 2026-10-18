@@ -1,5 +1,6 @@
 ---
 title: Power Budget
+glightbox: false
 ---
 
 ## Overview
@@ -7,13 +8,13 @@ Write a overview of what you did and why you did a Power Budget.
 
 > Capture your power budge as a image to display. Take time to get clean breaks and a well organized layout.
 
-![1](1.png){style width:"350" height:"300;"}
+![Power budget page 1](1.png)
 
-![2](2.png){style width:"350" height:"300;"}
+![Power budget page 2](2.png)
 
-![3](3.png){style width:"350" height:"300;"}
+![Power budget page 3](3.png)
 
-![4](4.png){style width:"350" height:"300;"}
+![Power budget page 4](4.png)
 
 ## Conclusions
 
