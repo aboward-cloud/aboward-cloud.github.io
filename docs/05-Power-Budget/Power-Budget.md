@@ -4,9 +4,8 @@ glightbox: false
 ---
 
 ## Overview
-Write a overview of what you did and why you did a Power Budget.
+A power budget ensures that a systems power supply and voltage regulators are qualified to power everything on the board. This is accomplished by calculating the power requirments of each component and comparing said requirments to the power supply.    
 
-> Capture your power budge as a image to display. Take time to get clean breaks and a well organized layout.
 
 ![Power budget page 1](1.png)
 
