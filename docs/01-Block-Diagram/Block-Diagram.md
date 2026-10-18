@@ -13,4 +13,4 @@ This block diagram demonstraights the boards: isolated power regions, LCD integr
 ## Block Diagram 
 Showing an example of how to import a screenshot of the block diagram created outside of git and brought into a page.
 
-![Example of Indivial Block diagram ](Boward_BlockDiagram.png)
+![Boward BlockDiagram.png](Boward_BlockDiagram.png)
