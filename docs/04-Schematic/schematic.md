@@ -9,7 +9,7 @@ This schematic is designed to receive and display various weather data from thre
 
 
 ![schematic](Boward-Schematic.png){style width:"350" height:"300;"}
-**Figure 1:** Showing a example schematic.
+**Figure 1:** Showing the complete schematic.
 
 
 ## Resouces
