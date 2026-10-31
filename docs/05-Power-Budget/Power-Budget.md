@@ -13,7 +13,6 @@ A power budget ensures that a systems power supply and voltage regulators are qu
 
 ![Power budget page 3](3.png)
 
-![Power budget page 4](4.png)
 
 ## Conclusions
 
