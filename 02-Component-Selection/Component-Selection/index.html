@@ -632,6 +632,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mcu-gpio-assignments" class="md-nav__link">
+    <span class="md-ellipsis">
+      MCU GPIO assignments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#button-and-supporting-component-decisions" class="md-nav__link">
     <span class="md-ellipsis">
       Button and supporting component decisions
@@ -641,9 +650,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mcc-configuration-and-remaining-evidence" class="md-nav__link">
+  <a href="#configuration-status-and-remaining-evidence" class="md-nav__link">
     <span class="md-ellipsis">
-      MCC configuration and remaining evidence
+      Configuration status and remaining evidence
     </span>
   </a>
   
@@ -973,6 +982,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mcu-gpio-assignments" class="md-nav__link">
+    <span class="md-ellipsis">
+      MCU GPIO assignments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#button-and-supporting-component-decisions" class="md-nav__link">
     <span class="md-ellipsis">
       Button and supporting component decisions
@@ -982,9 +1000,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mcc-configuration-and-remaining-evidence" class="md-nav__link">
+  <a href="#configuration-status-and-remaining-evidence" class="md-nav__link">
     <span class="md-ellipsis">
-      MCC configuration and remaining evidence
+      Configuration status and remaining evidence
     </span>
   </a>
   
@@ -1047,7 +1065,9 @@
 </table>
 <p><strong>Current choice: SunFounder LCD1602, referenced as CN0293 in the design.</strong></p>
 <p><a href="https://www.amazon.com/dp/B071Y6JX3H">Selected LCD product listing</a>. The local BOM records a historical $6.99 estimate; confirm the exact supplied model and manufacturer specifications before purchase.</p>
-<p>The selected 16x2 parallel character display replaces the earlier Newhaven 20x4 proposal. Two rows support a sensor label and a reading with units, while the button cycles between the three sources. The larger alternatives provide more simultaneous information but are unnecessary for this one-reading-at-a-time interface. The selected module uses 5 V logic power and a separate 3.3 V backlight connection, with an external 50k contrast trimmer. Four-bit operation uses six MCU outputs. Maximum logic/backlight current and physical fit remain to be verified. A photo of the exact selected module still needs to be added; the images above depict the earlier alternatives.</p>
+<p>The selected 16x2 parallel character display replaces the earlier Newhaven 20x4 proposal. Two rows support a sensor label and a reading with units, while the button cycles between the three sources. The larger alternatives provide more simultaneous information but are unnecessary for this one-reading-at-a-time interface. The selected module uses 5 V logic power and a separate 3.3 V backlight connection, with an external 50k contrast trimmer. Four-bit operation uses six MCU outputs. Maximum logic/backlight current and physical fit remain to be verified. </p>
+<p><img alt="SunFounder CN0293 LCD1602" src="../SunFounder-CN0293.jpg" width="400" /></p>
+<p><em>Selected display; image supplied by <a href="https://www.sunfounder.com/products/lcd1602-module">SunFounder</a>. The manufacturer identifies SKU CN0293 and specifies 16x2 characters, 5 V logic supply, a 3.3 V backlight, a 50k contrast adjustment and an 80 x 36 x 12 mm module. Manufacturer-listed price checked October 30, 2026: $6.99 before fees. Confirm the delivered module matches these specifications.</em></p>
 <h2 id="lcd-display-subsystem-5-v-linear-regulator"><strong>LCD display subsystem: 5 V linear regulator</strong></h2>
 <table>
 <thead>
@@ -1134,7 +1154,9 @@
 </tbody>
 </table>
 <p><strong>Current proposed choice: Triad Magnetics WSU090-1300, regulated 9 V / 1.3 A.</strong></p>
-<p><a href="https://www.digikey.com/en/products/detail/triad-magnetics/WSU090-1300/3094977">Selected adapter</a>. The local BOM draft records $8.65 as a historical estimate. Its 9 V output supports the required linear-regulator topology, and the center-positive 5.5/2.1 mm plug is intended to mate with the PJ-002A jack. The draft choice offers more source capacity than the earlier 1 A Adafruit option. Confirm price, mating fit, polarity and maximum path currents; adapter current capacity does not establish regulator thermal capacity. The comparison images above show the earlier candidates; a matching selected-adapter image remains to be added.</p>
+<p><a href="https://www.digikey.com/en/products/detail/triad-magnetics/WSU090-1300/3094977">Selected adapter</a>. The local BOM draft records $8.65 as a historical estimate. Its 9 V output supports the required linear-regulator topology, and the center-positive 5.5/2.1 mm plug is intended to mate with the PJ-002A jack. The draft choice offers more source capacity than the earlier 1 A Adafruit option. Confirm price, mating fit, polarity and maximum path currents; adapter current capacity does not establish regulator thermal capacity. </p>
+<p><img alt="Triad WSU series adapter" src="../Triad-WSU-Series.jpg" width="200" /></p>
+<p><em>Distributor representative WSU-series image from <a href="https://www.digikey.com/en/products/detail/triad-magnetics/WSU090-1300/3094977">DigiKey</a>; exact model specifications are provided by the <a href="https://catalog.triadmagnetics.com/Asset/WSU090-1300.pdf">Triad WSU090-1300 datasheet</a>. The datasheet specifies 9 V, 1.3 A, +/-5% line/load regulation and full-load operation at 0–40 C. DigiKey listed $8.65 for one unit when checked October 30, 2026, before shipping, taxes or other fees.</em></p>
 <h3 id="custom-solution-considered"><strong>Custom solution considered</strong></h3>
 <p>A battery-holder assembly would provide portability but introduces discharge-voltage and runtime requirements that complicated the design. A custom mains supply adds isolation and protection design work with no project benefit; use a finished external adapter.</p>
 <h2 id="lcd-display-subsystem-dc-input-jack"><strong>LCD display subsystem: DC input jack</strong></h2>
@@ -1254,11 +1276,80 @@
 </tbody>
 </table>
 <p>Local UART logic is 5 V. Each peer's thresholds, voltage tolerance and powered-off behavior must be checked. Separate UARTs replace the old proposed shared-TX connection and allow independent sensor links.</p>
+<h2 id="mcu-gpio-assignments">MCU GPIO assignments</h2>
+<p>The following assignments were checked against the Revision H cost-reduced netlist. Nano contact numbers refer to the development board, not the bare PIC package.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>PIC GPIO</th>
+<th>Nano contact</th>
+<th>Destination / configuration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LCD register select</td>
+<td>RE0</td>
+<td>31</td>
+<td>LCD RS, pin 4; digital output, initially low.</td>
+</tr>
+<tr>
+<td>LCD enable</td>
+<td>RE1</td>
+<td>32</td>
+<td>LCD E, pin 6; digital output, initially low.</td>
+</tr>
+<tr>
+<td>LCD DB4</td>
+<td>RD4</td>
+<td>14</td>
+<td>LCD pin 11; digital output.</td>
+</tr>
+<tr>
+<td>LCD DB5</td>
+<td>RD5</td>
+<td>39</td>
+<td>LCD pin 12; digital output.</td>
+</tr>
+<tr>
+<td>LCD DB6</td>
+<td>RD6</td>
+<td>40</td>
+<td>LCD pin 13; digital output.</td>
+</tr>
+<tr>
+<td>LCD DB7</td>
+<td>RD7</td>
+<td>41</td>
+<td>LCD pin 14; digital output.</td>
+</tr>
+<tr>
+<td>Debounced button</td>
+<td>RB0</td>
+<td>46</td>
+<td>U4 Schmitt-buffer output; digital input.</td>
+</tr>
+<tr>
+<td>External debug LED</td>
+<td>RF2</td>
+<td>27</td>
+<td>R16/D5; digital output, initially low.</td>
+</tr>
+<tr>
+<td>Expansion header</td>
+<td>RC4, RC5, RC6, RC7, RA5, RA6</td>
+<td>11, 12, 13, 19, 48, 49</td>
+<td>J5 pins 3–8 respectively; reserved GPIO, leave as inputs until an external use is defined and budgeted.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Proposed serial settings:</strong> UART1, UART3 and UART4 use 9600 baud, 8 data bits, no parity and 1 stop bit (8N1), with separate TX/RX connections. These settings are the current proposal and await confirmation with the teammate boards. Disable analog mode on the digital signal pins and configure peripheral pin selection to match the UART table.</p>
 <h2 id="button-and-supporting-component-decisions">Button and supporting component decisions</h2>
 <p>The current button input uses an external pull-up, RC network and SN74LVC1G17 Schmitt buffer. The RC network reduces contact-bounce transitions and the buffer restores a defined digital edge. This replaces the earlier description of internal pull-up and firmware-only debounce. Actual bounce behavior and effective capacitor value still require qualification. The 50k contrast trimmer permits adjustment for the installed LCD and viewing conditions. Keyed team connectors and UART isolation shunts support assembly and debugging; cable orientation and reach still require physical checks.</p>
-<h2 id="mcc-configuration-and-remaining-evidence">MCC configuration and remaining evidence</h2>
-<p><strong>Pending: updated MCC configuration and screenshots.</strong> The three UART instances and their TX/RX pins must match the table above. The configuration must also show all LCD control/data GPIO, the buffered button input, debug LED, clock settings and every other used MCU pin. Confirm those GPIO assignments against Revision H before generating code. Baud rate and frame format must be agreed with each teammate; no unverified settings are claimed here.</p>
-<p>Add the actual MCC pin-manager and peripheral screenshots and link the saved configuration/project once verified. The interface table alone does not demonstrate a completed MCC configuration. Maximum Nano/LCD currents, the updated power budget, regulator qualification and peer electrical compatibility remain pending.</p>
+<h2 id="configuration-status-and-remaining-evidence">Configuration status and remaining evidence</h2>
+<p><strong>MCC configuration update deferred.</strong> The three UART instances and their TX/RX pins must match the table above. The configuration must also show all LCD control/data GPIO, the buffered button input, debug LED, clock settings and every other used MCU pin. Confirm those GPIO assignments against Revision H before generating code. The proposed serial format is 9600 baud, 8N1, pending teammate confirmation.</p>
+<p>The pin tables document the hardware assignments; they do not demonstrate a completed MCC configuration. Maximum Nano/LCD currents, the updated power budget, regulator qualification and peer electrical compatibility remain pending.</p>
 
 
 
