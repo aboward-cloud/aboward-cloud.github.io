@@ -25,7 +25,11 @@ Prices are historical comparison estimates, not current quotes. The latest BOM d
 
 [Selected LCD product listing](https://www.amazon.com/dp/B071Y6JX3H). The local BOM records a historical $6.99 estimate; confirm the exact supplied model and manufacturer specifications before purchase.
 
-The selected 16x2 parallel character display replaces the earlier Newhaven 20x4 proposal. Two rows support a sensor label and a reading with units, while the button cycles between the three sources. The larger alternatives provide more simultaneous information but are unnecessary for this one-reading-at-a-time interface. The selected module uses 5 V logic power and a separate 3.3 V backlight connection, with an external 50k contrast trimmer. Four-bit operation uses six MCU outputs. Maximum logic/backlight current and physical fit remain to be verified. A photo of the exact selected module still needs to be added; the images above depict the earlier alternatives.
+The selected 16x2 parallel character display replaces the earlier Newhaven 20x4 proposal. Two rows support a sensor label and a reading with units, while the button cycles between the three sources. The larger alternatives provide more simultaneous information but are unnecessary for this one-reading-at-a-time interface. The selected module uses 5 V logic power and a separate 3.3 V backlight connection, with an external 50k contrast trimmer. Four-bit operation uses six MCU outputs. Maximum logic/backlight current and physical fit remain to be verified. 
+
+![SunFounder CN0293 LCD1602](SunFounder-CN0293.jpg){ width="400" }
+
+*Selected display; image supplied by [SunFounder](https://www.sunfounder.com/products/lcd1602-module). The manufacturer identifies SKU CN0293 and specifies 16x2 characters, 5 V logic supply, a 3.3 V backlight, a 50k contrast adjustment and an 80 x 36 x 12 mm module. Manufacturer-listed price checked October 30, 2026: $6.99 before fees. Confirm the delivered module matches these specifications.*
 
 ## **LCD display subsystem: 5 V linear regulator**
 
@@ -61,7 +65,11 @@ The LD1117V33 provides the separate 3.3 V backlight rail; the Nano and LCD logic
 
 **Current proposed choice: Triad Magnetics WSU090-1300, regulated 9 V / 1.3 A.**
 
-[Selected adapter](https://www.digikey.com/en/products/detail/triad-magnetics/WSU090-1300/3094977). The local BOM draft records $8.65 as a historical estimate. Its 9 V output supports the required linear-regulator topology, and the center-positive 5.5/2.1 mm plug is intended to mate with the PJ-002A jack. The draft choice offers more source capacity than the earlier 1 A Adafruit option. Confirm price, mating fit, polarity and maximum path currents; adapter current capacity does not establish regulator thermal capacity. The comparison images above show the earlier candidates; a matching selected-adapter image remains to be added.
+[Selected adapter](https://www.digikey.com/en/products/detail/triad-magnetics/WSU090-1300/3094977). The local BOM draft records $8.65 as a historical estimate. Its 9 V output supports the required linear-regulator topology, and the center-positive 5.5/2.1 mm plug is intended to mate with the PJ-002A jack. The draft choice offers more source capacity than the earlier 1 A Adafruit option. Confirm price, mating fit, polarity and maximum path currents; adapter current capacity does not establish regulator thermal capacity. 
+
+![Triad WSU series adapter](Triad-WSU-Series.jpg){ width="200" }
+
+*Distributor representative WSU-series image from [DigiKey](https://www.digikey.com/en/products/detail/triad-magnetics/WSU090-1300/3094977); exact model specifications are provided by the [Triad WSU090-1300 datasheet](https://catalog.triadmagnetics.com/Asset/WSU090-1300.pdf). The datasheet specifies 9 V, 1.3 A, +/-5% line/load regulation and full-load operation at 0–40 C. DigiKey listed $8.65 for one unit when checked October 30, 2026, before shipping, taxes or other fees.*
 
 ### **Custom solution considered**
 
@@ -109,12 +117,30 @@ The PJ-002A matches the planned layout approach and has the lowest observed unit
 
 Local UART logic is 5 V. Each peer's thresholds, voltage tolerance and powered-off behavior must be checked. Separate UARTs replace the old proposed shared-TX connection and allow independent sensor links.
 
+## MCU GPIO assignments
+
+The following assignments were checked against the Revision H cost-reduced netlist. Nano contact numbers refer to the development board, not the bare PIC package.
+
+| Function | PIC GPIO | Nano contact | Destination / configuration |
+| --- | --- | --- | --- |
+| LCD register select | RE0 | 31 | LCD RS, pin 4; digital output, initially low. |
+| LCD enable | RE1 | 32 | LCD E, pin 6; digital output, initially low. |
+| LCD DB4 | RD4 | 14 | LCD pin 11; digital output. |
+| LCD DB5 | RD5 | 39 | LCD pin 12; digital output. |
+| LCD DB6 | RD6 | 40 | LCD pin 13; digital output. |
+| LCD DB7 | RD7 | 41 | LCD pin 14; digital output. |
+| Debounced button | RB0 | 46 | U4 Schmitt-buffer output; digital input. |
+| External debug LED | RF2 | 27 | R16/D5; digital output, initially low. |
+| Expansion header | RC4, RC5, RC6, RC7, RA5, RA6 | 11, 12, 13, 19, 48, 49 | J5 pins 3–8 respectively; reserved GPIO, leave as inputs until an external use is defined and budgeted. |
+
+**Proposed serial settings:** UART1, UART3 and UART4 use 9600 baud, 8 data bits, no parity and 1 stop bit (8N1), with separate TX/RX connections. These settings are the current proposal and await confirmation with the teammate boards. Disable analog mode on the digital signal pins and configure peripheral pin selection to match the UART table.
+
 ## Button and supporting component decisions
 
 The current button input uses an external pull-up, RC network and SN74LVC1G17 Schmitt buffer. The RC network reduces contact-bounce transitions and the buffer restores a defined digital edge. This replaces the earlier description of internal pull-up and firmware-only debounce. Actual bounce behavior and effective capacitor value still require qualification. The 50k contrast trimmer permits adjustment for the installed LCD and viewing conditions. Keyed team connectors and UART isolation shunts support assembly and debugging; cable orientation and reach still require physical checks.
 
-## MCC configuration and remaining evidence
+## Configuration status and remaining evidence
 
-**Pending: updated MCC configuration and screenshots.** The three UART instances and their TX/RX pins must match the table above. The configuration must also show all LCD control/data GPIO, the buffered button input, debug LED, clock settings and every other used MCU pin. Confirm those GPIO assignments against Revision H before generating code. Baud rate and frame format must be agreed with each teammate; no unverified settings are claimed here.
+**MCC configuration update deferred.** The three UART instances and their TX/RX pins must match the table above. The configuration must also show all LCD control/data GPIO, the buffered button input, debug LED, clock settings and every other used MCU pin. Confirm those GPIO assignments against Revision H before generating code. The proposed serial format is 9600 baud, 8N1, pending teammate confirmation.
 
-Add the actual MCC pin-manager and peripheral screenshots and link the saved configuration/project once verified. The interface table alone does not demonstrate a completed MCC configuration. Maximum Nano/LCD currents, the updated power budget, regulator qualification and peer electrical compatibility remain pending.
+The pin tables document the hardware assignments; they do not demonstrate a completed MCC configuration. Maximum Nano/LCD currents, the updated power budget, regulator qualification and peer electrical compatibility remain pending.
