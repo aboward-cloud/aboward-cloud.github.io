@@ -7,6 +7,12 @@ glightbox: false
 
 **Zander Boward | Team 202: Weather Gadget | LCD Display Board**
 
+## Design requirements and revision
+
+This subsystem receives weather readings from three teammate boards and displays one selected reading and its units. The component choices prioritize a readable character display, a push-button interface, separate UART links, external 9 V power, and practical assembly. This update follows the local Revision H design. Earlier candidates are retained below to explain the evolution of the design.
+
+Prices are historical comparison estimates, not current quotes. The latest BOM draft proposes the SunFounder LCD1602 and Triad WSU090-1300; purchasing details and electrical qualification remain subject to confirmation.
+
 ## **LCD display subsystem: LCD display**
 
 | **Candidate and unit price** | **Advantages** | **Disadvantages** |
@@ -15,9 +21,11 @@ glightbox: false
 | **Adafruit 198 standard 20x4 LCD**<br>$17.95 each<br>![Adafruit 198 standard 20x4 LCD](Comp2.png)<br>[Link](https://www.adafruit.com/product/198) | A readily available character-display option with a documented parallel interface.<br>Uses a familiar six-signal character interface; includes a contrast potentiometer and header. | Intended for a 5 V supply, so 3.3 V input thresholds must be checked for the supplied controller.<br>A different module requires checking dimensions, backlight load, and firmware timing. |
 | **Adafruit 499 RGB 20x4 LCD**<br>$24.95 each<br>![Adafruit 499 RGB 20x4 LCD](Comp3.png)<br>[Link](https://www.adafruit.com/product/499) | Four lines retain the baseline information capacity.<br>Color could indicate weather alerts; includes contrast potentiometer and header. | RGB channels add connections and control work beyond the present diagram.<br>The 5 V backlight and logic arrangement needs a revised electrical check; multiple lit colors increase current. |
 
-**Choice: Newhaven NHD-0420H1Z-FSW-GBW-33V3.**
+**Current choice: SunFounder LCD1602, referenced as CN0293 in the design.**
 
-The Newhaven module is the best choice because its 3.3 V operation matches the MCU target and its 20x4 layout fits allows the user to read units, and status with ease. The $17.04 listing price is also cheaper than its alternatives. Additionally, its 79x36 mm size fits the 100x100 mm PCB limit, and the single-color backlight simplifies the code.
+[Selected LCD product listing](https://www.amazon.com/dp/B071Y6JX3H). The local BOM records a historical $6.99 estimate; confirm the exact supplied model and manufacturer specifications before purchase.
+
+The selected 16x2 parallel character display replaces the earlier Newhaven 20x4 proposal. Two rows support a sensor label and a reading with units, while the button cycles between the three sources. The larger alternatives provide more simultaneous information but are unnecessary for this one-reading-at-a-time interface. The selected module uses 5 V logic power and a separate 3.3 V backlight connection, with an external 50k contrast trimmer. Four-bit operation uses six MCU outputs. Maximum logic/backlight current and physical fit remain to be verified. A photo of the exact selected module still needs to be added; the images above depict the earlier alternatives.
 
 ## **LCD display subsystem: 5 V linear regulator**
 
@@ -29,31 +37,31 @@ The Newhaven module is the best choice because its 3.3 V operation matches the M
 
 **Choice: STMicroelectronics L7805CV.**
 
-The L7805CV is optimal for the low-current, wall-powered device. A fixed 9 V source provides sufficient input headroom, while the fixed output simplifies the design. Additionally, the lower-dropout alternative does not reduce the nominal 4 V power loss.
+The L7805CV is optimal for the low-current, wall-powered device. A fixed 9 V source provides sufficient input headroom, while the fixed output simplifies the design. Additionally, the lower-dropout alternative does not reduce the nominal voltage drop. Regulator dissipation depends on actual input voltage and load current; input protection losses and thermal performance must be included in qualification.
 
 ## **LCD display subsystem: 3.3 V linear regulator**
 
 | **Candidate and unit price** | **Advantages** | **Disadvantages** |
 | --- | --- | --- |
-| **STMicroelectronics LD1117V33**<br>$1.27 each<br>![STMicroelectronics LD1117V33](Comp7.png)<br>[Link](https://www.digikey.com/en/products/detail/stmicroelectronics/LD1117V33/586012) | Fixed 3.3 V output matches the display.<br>TO-220 construction and 800 mA rated capability provide assembly convenience and potential expansion headroom. | Up to 10 mA quiescent current is substantial relative to this small load.<br>Requires the datasheet output-capacitor arrangement; the 800 mA rating still requires thermal evaluation. |
+| **STMicroelectronics LD1117V33**<br>$1.27 each<br>![STMicroelectronics LD1117V33](Comp7.png)<br>[Link](https://www.digikey.com/en/products/detail/stmicroelectronics/LD1117V33/586012) | Fixed 3.3 V output supplies the selected display's backlight.<br>TO-220 construction and 800 mA rated capability provide assembly convenience and potential expansion headroom. | Up to 10 mA quiescent current is substantial relative to this small load.<br>Requires the datasheet output-capacitor arrangement; the 800 mA rating still requires thermal evaluation. |
 | **Microchip MCP1700-3302E/TO**<br>$0.50 each<br>![Microchip MCP1700-3302E/TO](Comp8.png)<br>[Link](https://www.digikey.com/en/products/detail/microchip-technology/MCP1700-3302E-TO/652680) | Very low quiescent current reduces idle consumption.<br>Through-hole TO-92 package and a ceramic output-capacitor option simplify a small board. | 250 mA current capability provides less expansion capacity than LD1117.<br>Its 6 V maximum input prevents connection directly to the 9 V source; TO-92 heat dissipation limits usable current. |
 | **Texas Instruments LM3940IT-3.3/NOPB**<br>$2.69 each<br>![Texas Instruments LM3940IT-3.3/NOPB](Comp9.png)<br>[LInk](https://www.digikey.com/en/products/detail/texas-instruments/LM3940IT-3-3-NOPB/308006) | Designed specifically for conversion from a 5 V bus to 3.3 V.<br>TO-220 package and 1 A capability support a larger load if thermally feasible. | More expensive than either alternative.<br>Needs at least 33 uF output capacitance within the specified ESR window; its intended input range is narrow. |
 
 **Choice: STMicroelectronics LD1117V33.**
 
-The LD1117V33 retains the proposed through-hole regulator and permits a larger future load than the 250 mA. My original choice was the MCP1700, but it costs more and uses substantially more quiescent current than MCP1700, but continuous wall power makes idle efficiency less important than assembly convenience and expansion capacity here. Its 800 mA rating is conditional on thermal design; the present calculated requirement is only 84.375 mA. Verify the 5 V input tolerance and stability capacitor before committing the design.
+The LD1117V33 provides the separate 3.3 V backlight rail; the Nano and LCD logic use 5 V. Its through-hole package supports assembly and provides potential current capacity, subject to thermal limits. Compared with MCP1700, it costs more and consumes more quiescent current. Continuous external power makes this tradeoff acceptable, but the final maximum-current budget must establish the required capacity. The earlier 84.375 mA estimate is superseded. Verify output-capacitor capacitance/ESR, input headroom, and temperature before treating the rail as qualified.
 
 ## **LCD display subsystem: External power source**
 
 | **Candidate and unit price** | **Advantages** | **Disadvantages** |
 | --- | --- | --- |
 | **Adafruit 63, regulated 9 V / 1 A wall adapter**<br>$8.95 each<br>![Adafruit 63, regulated 9 V / 1 A wall adapter](Comp10.png)<br>[Link](https://www.adafruit.com/product/63) | Provides headroom for the proposed 5 V stage.<br>Fixed voltage and a center-positive 5.5/2.1 mm plug make repeatable bench operation convenient. | Requires an AC outlet and a cable.<br>Cascaded linear conversion wastes power; the source current rating does not equal regulator thermal capability. |
-| **Triad Magnetics WSU090-0800, 9 V / 0.8 A**<br>$8.03 each<br>![Triad Magnetics WSU090-0800, 9 V / 0.8 A](Comp11.png)<br>[Link](https://www.digikey.com/en/products/detail/triad-magnetics/WSU090-0800/3094975) | 9 V output preserves the required barrel input and 5 V linear regulator.<br>0.8 A exceeds the preliminary 109.375 mA input requirement; listed price is lower than Adafruit 63. | Only 0.8 A leaves less reserve for a shared team supply than the other candidates.<br>The documented full-load ambient range is 0 to 40 C; the 11 mm plug length still needs a mechanical fit check. |
+| **Triad Magnetics WSU090-0800, 9 V / 0.8 A**<br>$8.03 each<br>![Triad Magnetics WSU090-0800, 9 V / 0.8 A](Comp11.png)<br>[Link](https://www.digikey.com/en/products/detail/triad-magnetics/WSU090-0800/3094975) | 9 V output preserves the required barrel input and 5 V linear regulator.<br>Lower nominal capacity than the other adapter candidates; final current margin requires the revised power budget. | Only 0.8 A leaves less reserve for a shared team supply than the other candidates.<br>The documented full-load ambient range is 0 to 40 C; the 11 mm plug length still needs a mechanical fit check. |
 | **Triad Magnetics WSU090-2000, 9 V / 2 A**<br>$12.43 each<br>![Triad Magnetics WSU090-2000, 9 V / 2 A](Comp12.png)<br>[Link](https://www.digikey.com/en/products/detail/triad-magnetics/WSU090-2000/3094951) | 9 V output retains both on-board linear stages.<br>2 A source capacity could support more separately fed team boards after a combined power check. | Costs more than the two alternatives and provides unnecessary capacity for this board alone.<br>Its 77x48x31 mm body occupies more outlet space; source capacity does not remove regulator heating. |
 
-**Choice: Adafruit 63, regulated 9 V / 1 A wall adapter.**
+**Current proposed choice: Triad Magnetics WSU090-1300, regulated 9 V / 1.3 A.**
 
-The Adafruit 63 is best for this board because its regulated 9 V output meets the input requirement, its 5.5/2.1 mm plug matches the intended jack type, and 1 A provides ample reserve. It costs $0.92 more than the 0.8 A Triad option for another 0.2 A of capacity, while avoiding the $3.48 extra cost and larger body of the 2 A option.
+[Selected adapter](https://www.digikey.com/en/products/detail/triad-magnetics/WSU090-1300/3094977). The local BOM draft records $8.65 as a historical estimate. Its 9 V output supports the required linear-regulator topology, and the center-positive 5.5/2.1 mm plug is intended to mate with the PJ-002A jack. The draft choice offers more source capacity than the earlier 1 A Adafruit option. Confirm price, mating fit, polarity and maximum path currents; adapter current capacity does not establish regulator thermal capacity. The comparison images above show the earlier candidates; a matching selected-adapter image remains to be added.
 
 ### **Custom solution considered**
 
@@ -85,31 +93,28 @@ The PJ-002A matches the planned layout approach and has the lowest observed unit
 
 3D printing the enclosure permits the group to focus on designing around the circuit boards rather than worrying if everything will fit together.
 
-## **Interface pin table**
+## Interface and supply assignments
 
-| **MCU / net** | **Destination** | **Direction** | **Purpose** |
-| --- | --- | --- | --- |
-| RC6 / UART1 TX | J5, J6, J7 pin 1 | Output | Proposed shared command TX; each cable reaches one sensor RX. |
-| RC7 / UART1 RX | J5 pin 2 | Input | Humidity sensor TX; dedicated receive line. |
-| RD2 / UART2 RX | J6 pin 2 | Input | Pressure sensor TX; dedicated receive line. |
-| RA7 / UART3 RX | J7 pin 2 | Input | Temperature sensor TX; use internal oscillator. |
-| Not connected | J5, J6, J7 pins 3-5 | Reserved digital | Leave unconnected on the LCD board in this proposal. |
-| Not connected | J5, J6, J7 pins 6-7 | Reserved analog | Leave unconnected; no power on the ribbon cables. |
-| GND | J5, J6, J7 pin 8 | Ground | Common signal return on every cable. |
-| RD0 | LCD pin 4 (RS) | Output | Register select. |
-| RD1 | LCD pin 6 (E) | Output | Enable strobe. |
-| RD4 | LCD pin 11 (DB4) | Output | Upper data nibble bit 0. |
-| RD5 | LCD pin 12 (DB5) | Output | Upper data nibble bit 1. |
-| RD6 | LCD pin 13 (DB6) | Output | Upper data nibble bit 2. |
-| RD7 | LCD pin 14 (DB7) | Output | Upper data nibble bit 3. |
-| RB0 | Button contact | Input | Internal weak pull-up enabled; opposite contact to GND; debounce in firmware. |
-| 3.3 V | LCD pin 2 (VDD); Nano VTG | Power | External target supply; Nano VOFF tied to GND. |
-| GND | LCD pins 1, 5, 16 | Ground | VSS, R/W, and backlight cathode. R/W low makes the display write-only. |
-| Contrast network | LCD pin 3 (V0) | Analog bias | Potentiometer adjustment near GND; verify contrast over operating conditions. |
-| 3.3 V via resistor | LCD pin 15 (LED+) | Power | Current-limited backlight; no direct GPIO drive. |
-| Not connected | LCD pins 7-10 (DB0-DB3) | Unused | Leave unused during 4-bit operation. |
-| GND | Nano GND and VOFF | Ground | Common return and onboard target-regulator disable. |
-| 9 V input | L7805CV IN | Power | Jack center contact to regulator input; return to GND. |
-| 5 V | L7805CV OUT to LD1117V33 IN | Power | Intermediate rail; no power on the ribbon connector. |
-| 3.3 V | LD1117V33 OUT | Power | Feeds LCD and Nano target at VTG. |
+| Interface | Current assignment | Purpose |
+| --- | --- | --- |
+| Pressure board, J1 | UART1: RC2 TX / RC3 RX | Independent pressure communication. |
+| Light board, J2 | UART3: RA3 TX / RA4 RX | Independent light communication. |
+| Humidity board, J3 | UART4: RD0 TX / RD1 RX | Independent humidity communication. |
+| J1-J3 cable contacts | Pin 1 local TX; pin 2 local RX; pin 8 GND; pins 3-7 unused | No power exported. Confirm actual TX-to-RX continuity and peer voltage compatibility before connection. |
+| Nano target supply | 5 V through R17 to VTG; VOFF grounded; VBUS unused | External target supply with onboard target regulator disabled. |
+| LCD logic | 5 V through R18 | LCD logic supply. |
+| LCD backlight | 3.3 V; return to GND | Separate backlight supply; maximum current pending. |
+| Contrast | Bourns 3362P-1-503LF, 50k | Adjustable LCD contrast. |
+| LCD R/W and unused DB0-DB3 | External pull-down networks | Write-only four-bit operation with defined unused inputs. |
 
+Local UART logic is 5 V. Each peer's thresholds, voltage tolerance and powered-off behavior must be checked. Separate UARTs replace the old proposed shared-TX connection and allow independent sensor links.
+
+## Button and supporting component decisions
+
+The current button input uses an external pull-up, RC network and SN74LVC1G17 Schmitt buffer. The RC network reduces contact-bounce transitions and the buffer restores a defined digital edge. This replaces the earlier description of internal pull-up and firmware-only debounce. Actual bounce behavior and effective capacitor value still require qualification. The 50k contrast trimmer permits adjustment for the installed LCD and viewing conditions. Keyed team connectors and UART isolation shunts support assembly and debugging; cable orientation and reach still require physical checks.
+
+## MCC configuration and remaining evidence
+
+**Pending: updated MCC configuration and screenshots.** The three UART instances and their TX/RX pins must match the table above. The configuration must also show all LCD control/data GPIO, the buffered button input, debug LED, clock settings and every other used MCU pin. Confirm those GPIO assignments against Revision H before generating code. Baud rate and frame format must be agreed with each teammate; no unverified settings are claimed here.
+
+Add the actual MCC pin-manager and peripheral screenshots and link the saved configuration/project once verified. The interface table alone does not demonstrate a completed MCC configuration. Maximum Nano/LCD currents, the updated power budget, regulator qualification and peer electrical compatibility remain pending.
