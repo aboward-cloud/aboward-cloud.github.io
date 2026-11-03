@@ -1,0 +1,2127 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+
+<meta name="robots" content="nofollow">
+
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://embedded-systems-design.github.io/EGR304DataSheetTemplate/03-BOM/BOM/">
+      
+      
+        <link rel="prev" href="../../02-Component-Selection/Component-Selection/">
+      
+      
+        <link rel="next" href="../../04-Schematic/schematic/">
+      
+      
+      <link rel="icon" href="../../static/logo304.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+            
+
+    
+
+    
+      
+        <title>Bill of Materials — Revision J - EGR 304 Data Sheet Template</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.66ac8b77.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+
+
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#bill-of-materials-revision-j" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="EGR 304 Data Sheet Template" class="md-header__button md-logo" aria-label="EGR 304 Data Sheet Template" data-md-component="logo">
+      
+  <img src="../../static/logo304.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EGR 304 Data Sheet Template
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Bill of Materials — Revision J
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/embedded-systems-design/EGR304DataSheetTemplate" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../01-Block-Diagram/Block-Diagram/" class="md-tabs__link">
+          
+  
+    
+  
+  01 Block Diagram
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../02-Component-Selection/Component-Selection/" class="md-tabs__link">
+          
+  
+    
+  
+  02 Component Selection
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+    
+  
+  03 BOM
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../04-Schematic/schematic/" class="md-tabs__link">
+          
+  
+    
+  
+  04 Schematic
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../05-Power-Budget/Power-Budget/" class="md-tabs__link">
+          
+  
+    
+  
+  05 Power Budget
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Appendix/" class="md-tabs__link">
+          
+  
+    
+  
+  Appendix
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="EGR 304 Data Sheet Template" class="md-nav__button md-logo" aria-label="EGR 304 Data Sheet Template" data-md-component="logo">
+      
+  <img src="../../static/logo304.svg" alt="logo">
+
+    </a>
+    EGR 304 Data Sheet Template
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/embedded-systems-design/EGR304DataSheetTemplate" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../01-Block-Diagram/Block-Diagram/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    01 Block Diagram
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../02-Component-Selection/Component-Selection/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    02 Component Selection
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    03 BOM
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            03 BOM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Bill of Materials — Revision J
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Bill of Materials — Revision J
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#digikey" class="md-nav__link">
+    <span class="md-ellipsis">
+      DigiKey
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mouser" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mouser
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#newark" class="md-nav__link">
+    <span class="md-ellipsis">
+      Newark
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pcb-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      PCB features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sourcing-and-assembly-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sourcing and assembly notes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sourcing and assembly notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#0154250dr" class="md-nav__link">
+    <span class="md-ellipsis">
+      0154.250DR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0154500dr" class="md-nav__link">
+    <span class="md-ellipsis">
+      0154.500DR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1n5819-e354" class="md-nav__link">
+    <span class="md-ellipsis">
+      1N5819-E3/54
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#381116-100" class="md-nav__link">
+    <span class="md-ellipsis">
+      3811/16 100
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b3f-1000" class="md-nav__link">
+    <span class="md-ellipsis">
+      B3F-1000
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c0805c104k5ractu" class="md-nav__link">
+    <span class="md-ellipsis">
+      C0805C104K5RACTU
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c0805c334k3ractu" class="md-nav__link">
+    <span class="md-ellipsis">
+      C0805C334K3RACTU
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dm164150" class="md-nav__link">
+    <span class="md-ellipsis">
+      DM164150
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ltst-c170krkt" class="md-nav__link">
+    <span class="md-ellipsis">
+      LTST-C170KRKT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m20-1060800" class="md-nav__link">
+    <span class="md-ellipsis">
+      M20-1060800
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m20-1180046" class="md-nav__link">
+    <span class="md-ellipsis">
+      M20-1180046
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m20-9990845" class="md-nav__link">
+    <span class="md-ellipsis">
+      M20-9990845
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m20-9991645" class="md-nav__link">
+    <span class="md-ellipsis">
+      M20-9991645
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pj-002a" class="md-nav__link">
+    <span class="md-ellipsis">
+      PJ-002A
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pptc281lfbn-rc" class="md-nav__link">
+    <span class="md-ellipsis">
+      PPTC281LFBN-RC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rc1206fr-0710kl" class="md-nav__link">
+    <span class="md-ellipsis">
+      RC1206FR-0710KL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rc1206fr-071kl" class="md-nav__link">
+    <span class="md-ellipsis">
+      RC1206FR-071KL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rc1206fr-072k2l" class="md-nav__link">
+    <span class="md-ellipsis">
+      RC1206FR-072K2L
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rc1206fr-07470rl" class="md-nav__link">
+    <span class="md-ellipsis">
+      RC1206FR-07470RL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rc1206fr-0747kl" class="md-nav__link">
+    <span class="md-ellipsis">
+      RC1206FR-0747KL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rc1206fr-074k7l" class="md-nav__link">
+    <span class="md-ellipsis">
+      RC1206FR-074K7L
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rc1206jr-070rl" class="md-nav__link">
+    <span class="md-ellipsis">
+      RC1206JR-070RL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sn74lvc1g17dbvr" class="md-nav__link">
+    <span class="md-ellipsis">
+      SN74LVC1G17DBVR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t350f226k016at" class="md-nav__link">
+    <span class="md-ellipsis">
+      T350F226K016AT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t491a225k025at" class="md-nav__link">
+    <span class="md-ellipsis">
+      T491A225K025AT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tst-104-01-g-d" class="md-nav__link">
+    <span class="md-ellipsis">
+      TST-104-01-G-D
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wsu090-1300" class="md-nav__link">
+    <span class="md-ellipsis">
+      WSU090-1300
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#idsd-04-d-0800-g" class="md-nav__link">
+    <span class="md-ellipsis">
+      IDSD-04-D-08.00-G
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lm1086it-50nopb" class="md-nav__link">
+    <span class="md-ellipsis">
+      LM1086IT-5.0/NOPB
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nhd-0216k1z-fsw-ftw-fb1" class="md-nav__link">
+    <span class="md-ellipsis">
+      NHD-0216K1Z-FSW-FTW-FB1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eeufr1e470" class="md-nav__link">
+    <span class="md-ellipsis">
+      EEUFR1E470
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-and-release-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation and release checks
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../04-Schematic/schematic/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    04 Schematic
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../05-Power-Budget/Power-Budget/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    05 Power Budget
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../Appendix/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Appendix
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#digikey" class="md-nav__link">
+    <span class="md-ellipsis">
+      DigiKey
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mouser" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mouser
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#newark" class="md-nav__link">
+    <span class="md-ellipsis">
+      Newark
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pcb-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      PCB features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sourcing-and-assembly-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sourcing and assembly notes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sourcing and assembly notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#0154250dr" class="md-nav__link">
+    <span class="md-ellipsis">
+      0154.250DR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0154500dr" class="md-nav__link">
+    <span class="md-ellipsis">
+      0154.500DR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1n5819-e354" class="md-nav__link">
+    <span class="md-ellipsis">
+      1N5819-E3/54
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#381116-100" class="md-nav__link">
+    <span class="md-ellipsis">
+      3811/16 100
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b3f-1000" class="md-nav__link">
+    <span class="md-ellipsis">
+      B3F-1000
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c0805c104k5ractu" class="md-nav__link">
+    <span class="md-ellipsis">
+      C0805C104K5RACTU
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c0805c334k3ractu" class="md-nav__link">
+    <span class="md-ellipsis">
+      C0805C334K3RACTU
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dm164150" class="md-nav__link">
+    <span class="md-ellipsis">
+      DM164150
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ltst-c170krkt" class="md-nav__link">
+    <span class="md-ellipsis">
+      LTST-C170KRKT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m20-1060800" class="md-nav__link">
+    <span class="md-ellipsis">
+      M20-1060800
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m20-1180046" class="md-nav__link">
+    <span class="md-ellipsis">
+      M20-1180046
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m20-9990845" class="md-nav__link">
+    <span class="md-ellipsis">
+      M20-9990845
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m20-9991645" class="md-nav__link">
+    <span class="md-ellipsis">
+      M20-9991645
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pj-002a" class="md-nav__link">
+    <span class="md-ellipsis">
+      PJ-002A
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pptc281lfbn-rc" class="md-nav__link">
+    <span class="md-ellipsis">
+      PPTC281LFBN-RC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rc1206fr-0710kl" class="md-nav__link">
+    <span class="md-ellipsis">
+      RC1206FR-0710KL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rc1206fr-071kl" class="md-nav__link">
+    <span class="md-ellipsis">
+      RC1206FR-071KL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rc1206fr-072k2l" class="md-nav__link">
+    <span class="md-ellipsis">
+      RC1206FR-072K2L
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rc1206fr-07470rl" class="md-nav__link">
+    <span class="md-ellipsis">
+      RC1206FR-07470RL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rc1206fr-0747kl" class="md-nav__link">
+    <span class="md-ellipsis">
+      RC1206FR-0747KL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rc1206fr-074k7l" class="md-nav__link">
+    <span class="md-ellipsis">
+      RC1206FR-074K7L
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rc1206jr-070rl" class="md-nav__link">
+    <span class="md-ellipsis">
+      RC1206JR-070RL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sn74lvc1g17dbvr" class="md-nav__link">
+    <span class="md-ellipsis">
+      SN74LVC1G17DBVR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t350f226k016at" class="md-nav__link">
+    <span class="md-ellipsis">
+      T350F226K016AT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t491a225k025at" class="md-nav__link">
+    <span class="md-ellipsis">
+      T491A225K025AT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tst-104-01-g-d" class="md-nav__link">
+    <span class="md-ellipsis">
+      TST-104-01-G-D
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wsu090-1300" class="md-nav__link">
+    <span class="md-ellipsis">
+      WSU090-1300
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#idsd-04-d-0800-g" class="md-nav__link">
+    <span class="md-ellipsis">
+      IDSD-04-D-08.00-G
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lm1086it-50nopb" class="md-nav__link">
+    <span class="md-ellipsis">
+      LM1086IT-5.0/NOPB
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nhd-0216k1z-fsw-ftw-fb1" class="md-nav__link">
+    <span class="md-ellipsis">
+      NHD-0216K1Z-FSW-FTW-FB1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eeufr1e470" class="md-nav__link">
+    <span class="md-ellipsis">
+      EEUFR1E470
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-and-release-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation and release checks
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/embedded-systems-design/EGR304DataSheetTemplate/edit/main/docs/03-BOM/BOM.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
+    </a>
+  
+  
+
+
+<h1 id="bill-of-materials-revision-j">Bill of Materials — Revision J</h1>
+<p>Zander Boward | Team 202 Weather Gadget | November 3, 2026</p>
+<p><strong>Component cost: $90.91</strong></p>
+<p>Revision J basis: 67 schematic references (37 purchased items and 30 bare PCB pads), plus listed operating accessories. One assembly; no inventory credits, breadboard quantities or spares. Nano and LCD included at replacement cost.</p>
+<p>Pricing: published supplier USD listings checked November 3, 2026, at one-assembly quantities. Same prices in prototype and production columns. Round each extension to cents before summing. Tax, shipping and separately assessed tariffs are excluded; vendor-inclusive duties remain in published prices.</p>
+<p>Delivery: target ZIP 85212 within 10 calendar days after vendor order placement. Stock is a listing snapshot; 2-business-day transit after dispatch is an estimate, not a confirmed arrival. Newark lists 4-6 business days from UK stock. Confirm every dated ETA at checkout.</p>
+<p>Revision J: exact fixed-contrast FB1 LCD, LM1086IT-5.0/NOPB regulator, 22 uF output capacitor and 2.2 uF tantalum debounce capacitor. No trimmer, 3.3 V regulator, jumper headers or removable shunts. Reference numbering follows Revision J.</p>
+<p>Accessories: two 1x28 Nano sockets; one 1x16 LCD male header; four 1x8 female housings and 26 tin contacts; one foot of 26 AWG ribbon for 13 LCD conductors &lt;=150 mm; three approved gray UART cables; one 9 V adapter. No J5 cable is required by the Revision J accessory list.</p>
+<p>LCD pins 3, 15, 16 stay unconnected. Supply path drop, live regulator tab/thermal performance, stability, debounce, fit and fault clearing remain hardware qualifications. Mouser marks exact LCD NRND. Ordered/date/received/surplus fields remain blank.</p>
+<p>30 bare copper test pads carry no separate component cost. PCB fabrication, enclosure, mounting hardware and assembly tooling/labor are excluded. Website/PDF are local previews; export published website for final rubric submission. See Sourcing-review.md and packaged source records.</p>
+<table>
+<thead>
+<tr>
+<th>Supplier</th>
+<th style="text-align: right;">Subtotal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DigiKey</td>
+<td style="text-align: right;">$60.35</td>
+</tr>
+<tr>
+<td>Mouser</td>
+<td style="text-align: right;">$30.07</td>
+</tr>
+<tr>
+<td>Newark</td>
+<td style="text-align: right;">$0.49</td>
+</tr>
+<tr>
+<td>PCB features</td>
+<td style="text-align: right;">$0.00</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>$90.91</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="digikey">DigiKey</h2>
+<table>
+<thead>
+<tr>
+<th>Part / description</th>
+<th style="text-align: right;">Qty</th>
+<th style="text-align: right;">Prototype unit</th>
+<th style="text-align: right;">Prototype total</th>
+<th style="text-align: right;">Production unit</th>
+<th style="text-align: right;">Production total</th>
+<th>References / accessory use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.digikey.com/en/products/detail/littelfuse-inc/0154-250DR/183349">0154.250DR</a><br>250 mA fast removable fuse + holder assembly</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$4.84</td>
+<td style="text-align: right;">$4.84</td>
+<td style="text-align: right;">$4.84</td>
+<td style="text-align: right;">$4.84</td>
+<td>F1</td>
+</tr>
+<tr>
+<td><a href="https://www.digikey.com/en/products/detail/littelfuse-inc/0154-500DR/183350">0154.500DR</a><br>500 mA fast removable fuse + holder assembly</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$4.84</td>
+<td style="text-align: right;">$4.84</td>
+<td style="text-align: right;">$4.84</td>
+<td style="text-align: right;">$4.84</td>
+<td>F2</td>
+</tr>
+<tr>
+<td><a href="https://www.digikey.com/en/products/detail/vishay-general-semiconductor-diodes-division/1N5819-E3-54/1023531">1N5819-E3/54</a><br>1N5819, 1 A, 40 V Schottky, DO-41</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$0.71</td>
+<td style="text-align: right;">$0.71</td>
+<td style="text-align: right;">$0.71</td>
+<td style="text-align: right;">$0.71</td>
+<td>D1</td>
+</tr>
+<tr>
+<td><a href="https://www.digikey.com/en/products/detail/3m/3811-16-100/22532483">3811/16 100</a><br>26 AWG stranded color-coded ribbon, purchase unit = one foot</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$2.32</td>
+<td style="text-align: right;">$2.32</td>
+<td style="text-align: right;">$2.32</td>
+<td style="text-align: right;">$2.32</td>
+<td>LCD harness wire; one foot purchase unit (accessory)</td>
+</tr>
+<tr>
+<td><a href="https://www.digikey.com/en/products/detail/omron-electronics-inc-emc-div/B3F-1000/33150">B3F-1000</a><br>B3F-1000, SPST-NO tactile switch, 6x6 mm</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$0.35</td>
+<td style="text-align: right;">$0.35</td>
+<td style="text-align: right;">$0.35</td>
+<td style="text-align: right;">$0.35</td>
+<td>SW1</td>
+</tr>
+<tr>
+<td><a href="https://www.digikey.com/en/products/detail/kemet/C0805C104K5RACTU/411169">C0805C104K5RACTU</a><br>100 nF, 50 V, X7R, 10%, 0805</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">$0.18</td>
+<td style="text-align: right;">$0.54</td>
+<td style="text-align: right;">$0.18</td>
+<td style="text-align: right;">$0.54</td>
+<td>C3, C5, C7</td>
+</tr>
+<tr>
+<td><a href="https://www.digikey.com/en/products/detail/kemet/C0805C334K3RACTU/2212617">C0805C334K3RACTU</a><br>330 nF, 25 V, X7R, 10%, 0805</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$0.4</td>
+<td style="text-align: right;">$0.40</td>
+<td style="text-align: right;">$0.4</td>
+<td style="text-align: right;">$0.40</td>
+<td>C1</td>
+</tr>
+<tr>
+<td><a href="https://www.digikey.com/en/products/detail/microchip-technology/DM164150/11586705">DM164150</a><br>PIC18F57Q43 Curiosity Nano development board</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$10.61</td>
+<td style="text-align: right;">$10.61</td>
+<td style="text-align: right;">$10.61</td>
+<td style="text-align: right;">$10.61</td>
+<td>U1</td>
+</tr>
+<tr>
+<td><a href="https://www.digikey.com/en/products/detail/liteon/LTST-C170KRKT/386779">LTST-C170KRKT</a><br>Red LED, 0805</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">$0.18</td>
+<td style="text-align: right;">$0.54</td>
+<td style="text-align: right;">$0.18</td>
+<td style="text-align: right;">$0.54</td>
+<td>D2, D3, D4</td>
+</tr>
+<tr>
+<td><a href="https://www.digikey.com/en/products/detail/harwin-inc/M20-1060800/3728198">M20-1060800</a><br>8-position single-row female cable housing, 2.54 mm pitch</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">$0.37</td>
+<td style="text-align: right;">$1.48</td>
+<td style="text-align: right;">$0.37</td>
+<td style="text-align: right;">$1.48</td>
+<td>J6/J7 to DS1: both ends of two groups (accessory)</td>
+</tr>
+<tr>
+<td><a href="https://www.digikey.com/en/products/detail/harwin-inc/M20-1180046/3728125">M20-1180046</a><br>Loose tin crimp socket contacts, 22-30 AWG</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: right;">$0.1092</td>
+<td style="text-align: right;">$2.84</td>
+<td style="text-align: right;">$0.1092</td>
+<td style="text-align: right;">$2.84</td>
+<td>LCD harness: 13 conductors, both ends (accessory)</td>
+</tr>
+<tr>
+<td><a href="https://www.digikey.com/en/products/detail/harwin-inc/M20-9990845/3727965">M20-9990845</a><br>1x8 male header, 2.54 mm pitch</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">$0.37</td>
+<td style="text-align: right;">$1.11</td>
+<td style="text-align: right;">$0.37</td>
+<td style="text-align: right;">$1.11</td>
+<td>J5, J6, J7</td>
+</tr>
+<tr>
+<td><a href="https://www.digikey.com/en/products/detail/harwin-inc/M20-9991645/3921260">M20-9991645</a><br>16-position male LCD header, 2.54 mm pitch</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$0.69</td>
+<td style="text-align: right;">$0.69</td>
+<td style="text-align: right;">$0.69</td>
+<td style="text-align: right;">$0.69</td>
+<td>DS1 LCD header (accessory)</td>
+</tr>
+<tr>
+<td><a href="https://www.digikey.com/en/products/detail/same-sky-formerly-cui-devices/PJ-002A/96962">PJ-002A</a><br>DC barrel jack, PJ-002A, 2.0 mm center pin</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$0.66</td>
+<td style="text-align: right;">$0.66</td>
+<td style="text-align: right;">$0.66</td>
+<td style="text-align: right;">$0.66</td>
+<td>J4</td>
+</tr>
+<tr>
+<td><a href="https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPTC281LFBN-RC/810166">PPTC281LFBN-RC</a><br>Nano female socket strip, 1x28, 2.54 mm pitch</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">$1.7</td>
+<td style="text-align: right;">$3.40</td>
+<td style="text-align: right;">$1.7</td>
+<td style="text-align: right;">$3.40</td>
+<td>U1: both Nano socket strips (accessory)</td>
+</tr>
+<tr>
+<td><a href="https://www.digikey.com/en/products/detail/yageo/RC1206FR-0710KL/728483">RC1206FR-0710KL</a><br>10k ohm resistor, +/-1%, 0.25 W, 1206</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$0.1</td>
+<td style="text-align: right;">$0.10</td>
+<td style="text-align: right;">$0.1</td>
+<td style="text-align: right;">$0.10</td>
+<td>R6</td>
+</tr>
+<tr>
+<td><a href="https://www.digikey.com/en/products/detail/yageo/RC1206FR-071KL/728387">RC1206FR-071KL</a><br>1k ohm resistor, +/-1%, 0.25 W, 1206</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$0.1</td>
+<td style="text-align: right;">$0.10</td>
+<td style="text-align: right;">$0.1</td>
+<td style="text-align: right;">$0.10</td>
+<td>R10</td>
+</tr>
+<tr>
+<td><a href="https://www.digikey.com/en/products/detail/yageo/RC1206FR-072K2L/728624">RC1206FR-072K2L</a><br>2.2k ohm resistor, +/-1%, 0.25 W, 1206</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$0.1</td>
+<td style="text-align: right;">$0.10</td>
+<td style="text-align: right;">$0.1</td>
+<td style="text-align: right;">$0.10</td>
+<td>R9</td>
+</tr>
+<tr>
+<td><a href="https://www.digikey.com/en/products/detail/yageo/RC1206FR-07470RL/728934">RC1206FR-07470RL</a><br>470 ohm resistor, +/-1%, 0.25 W, 1206</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$0.1</td>
+<td style="text-align: right;">$0.10</td>
+<td style="text-align: right;">$0.1</td>
+<td style="text-align: right;">$0.10</td>
+<td>R4</td>
+</tr>
+<tr>
+<td><a href="https://www.digikey.com/en/products/detail/yageo/RC1206FR-0747KL/731878">RC1206FR-0747KL</a><br>47k ohm resistor, +/-1%, 0.25 W, 1206</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">$0.1</td>
+<td style="text-align: right;">$0.50</td>
+<td style="text-align: right;">$0.1</td>
+<td style="text-align: right;">$0.50</td>
+<td>R1, R2, R3, R5, R7</td>
+</tr>
+<tr>
+<td><a href="https://www.digikey.com/en/products/detail/yageo/RC1206FR-074K7L/728887">RC1206FR-074K7L</a><br>4.7k resistor, 1206, 0.25 W, 1%</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$0.1</td>
+<td style="text-align: right;">$0.10</td>
+<td style="text-align: right;">$0.1</td>
+<td style="text-align: right;">$0.10</td>
+<td>R8</td>
+</tr>
+<tr>
+<td><a href="https://www.digikey.com/en/products/detail/yageo/RC1206JR-070RL/732131">RC1206JR-070RL</a><br>0 ohm resistor, 1206, 0.25 W, 2 A jumper</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">$0.1</td>
+<td style="text-align: right;">$0.20</td>
+<td style="text-align: right;">$0.1</td>
+<td style="text-align: right;">$0.20</td>
+<td>R11, R12</td>
+</tr>
+<tr>
+<td><a href="https://www.digikey.com/en/products/detail/texas-instruments/SN74LVC1G17DBVR/389051">SN74LVC1G17DBVR</a><br>Schmitt buffer, SOT-23-5, SN74LVC1G17</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$0.15</td>
+<td style="text-align: right;">$0.15</td>
+<td style="text-align: right;">$0.15</td>
+<td style="text-align: right;">$0.15</td>
+<td>U3</td>
+</tr>
+<tr>
+<td><a href="https://www.digikey.com/en/products/detail/kemet/T350F226K016AT/818435">T350F226K016AT</a><br>22 uF, 16 V tantalum, 10%, case F, 2.54 mm pitch</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$4.76</td>
+<td style="text-align: right;">$4.76</td>
+<td style="text-align: right;">$4.76</td>
+<td style="text-align: right;">$4.76</td>
+<td>C4</td>
+</tr>
+<tr>
+<td><a href="https://www.digikey.com/en/products/detail/kemet/T491A225K025AT/3759239">T491A225K025AT</a><br>2.2 uF, 25 V, +/-10% polarized tantalum, A/3216 case</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$0.63</td>
+<td style="text-align: right;">$0.63</td>
+<td style="text-align: right;">$0.63</td>
+<td style="text-align: right;">$0.63</td>
+<td>C6</td>
+</tr>
+<tr>
+<td><a href="https://www.digikey.com/en/products/detail/samtec-inc/TST-104-01-G-D/9497049">TST-104-01-G-D</a><br>Keyed shrouded 2x4 PCB header, 2.54 mm pitch</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">$3.21</td>
+<td style="text-align: right;">$9.63</td>
+<td style="text-align: right;">$3.21</td>
+<td style="text-align: right;">$9.63</td>
+<td>J1, J2, J3</td>
+</tr>
+<tr>
+<td><a href="https://www.digikey.com/en/products/detail/triad-magnetics/WSU090-1300/3094977">WSU090-1300</a><br>9 V, 1.3 A regulated adapter, center-positive 5.5x2.1 mm</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$8.65</td>
+<td style="text-align: right;">$8.65</td>
+<td style="text-align: right;">$8.65</td>
+<td style="text-align: right;">$8.65</td>
+<td>J4: operating power adapter (accessory)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Subtotal: $60.35</strong></p>
+<h2 id="mouser">Mouser</h2>
+<table>
+<thead>
+<tr>
+<th>Part / description</th>
+<th style="text-align: right;">Qty</th>
+<th style="text-align: right;">Prototype unit</th>
+<th style="text-align: right;">Prototype total</th>
+<th style="text-align: right;">Production unit</th>
+<th style="text-align: right;">Production total</th>
+<th>References / accessory use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.mouser.com/ProductDetail/Samtec/IDSD-04-D-08.00-G?qs=0lQeLiL1qyZIFjM6oRjn%252BA%3D%3D">IDSD-04-D-08.00-G</a><br>8-contact 2x4 socket-to-socket IDC cable, 8 inch, gray, 2.54 mm connector pitch</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">$6.3</td>
+<td style="text-align: right;">$18.90</td>
+<td style="text-align: right;">$6.3</td>
+<td style="text-align: right;">$18.90</td>
+<td>J1-J3 UART interfaces (accessory)</td>
+</tr>
+<tr>
+<td><a href="https://www.mouser.com/ProductDetail/Texas-Instruments/LM1086IT-5.0-NOPB?qs=sGAEpiMZZMug9GoBKXZ759%2FWxdjGb5obqWlryGQJdV0%3D">LM1086IT-5.0/NOPB</a><br>5 V, 1.5 A LDO regulator, TO-220-3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$2.37</td>
+<td style="text-align: right;">$2.37</td>
+<td style="text-align: right;">$2.37</td>
+<td style="text-align: right;">$2.37</td>
+<td>U2</td>
+</tr>
+<tr>
+<td><a href="https://www.mouser.com/ProductDetail/Newhaven-Display/NHD-0216K1Z-FSW-FTW-FB1?qs=sGAEpiMZZMt7dcPGmvnkBpdHgMVhq5cu2av6HIr5mGo%3D">NHD-0216K1Z-FSW-FTW-FB1</a><br>16x2 parallel LCD, 5 V, fixed contrast and always-on white backlight</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$8.8</td>
+<td style="text-align: right;">$8.80</td>
+<td style="text-align: right;">$8.8</td>
+<td style="text-align: right;">$8.80</td>
+<td>DS1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Subtotal: $30.07</strong></p>
+<h2 id="newark">Newark</h2>
+<table>
+<thead>
+<tr>
+<th>Part / description</th>
+<th style="text-align: right;">Qty</th>
+<th style="text-align: right;">Prototype unit</th>
+<th style="text-align: right;">Prototype total</th>
+<th style="text-align: right;">Production unit</th>
+<th style="text-align: right;">Production total</th>
+<th>References / accessory use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.newark.com/panasonic/eeufr1e470/cap-alu-elec-47uf-25v-20/dp/92Y6310">EEUFR1E470</a><br>47 uF, 25 V radial, 5 mm diameter, 2 mm pitch</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$0.488</td>
+<td style="text-align: right;">$0.49</td>
+<td style="text-align: right;">$0.488</td>
+<td style="text-align: right;">$0.49</td>
+<td>C2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Subtotal: $0.49</strong></p>
+<h2 id="pcb-features">PCB features</h2>
+<table>
+<thead>
+<tr>
+<th>Part / description</th>
+<th style="text-align: right;">Qty</th>
+<th style="text-align: right;">Prototype unit</th>
+<th style="text-align: right;">Prototype total</th>
+<th style="text-align: right;">Production unit</th>
+<th style="text-align: right;">Production total</th>
+<th>References / accessory use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N/A - fabricated PCB feature<br>Bare copper test pads, 1.5 mm diameter; included in PCB fabrication</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">$0</td>
+<td style="text-align: right;">$0.00</td>
+<td style="text-align: right;">$0</td>
+<td style="text-align: right;">$0.00</td>
+<td>TP1, TP2, TP3, TP4, TP5, TP6, TP7, TP8, TP9, TP10, TP11, TP12, TP13, TP14, TP15, TP16, TP17, TP18, TP19, TP20, TP21, TP22, TP23, TP24, TP25, TP26, TP27, TP28, TP29, TP30</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Subtotal: $0.00</strong></p>
+<h2 id="sourcing-and-assembly-notes">Sourcing and assembly notes</h2>
+<h3 id="0154250dr">0154.250DR</h3>
+<p><a href="https://www.digikey.com/en/products/detail/littelfuse-inc/0154-250DR/183349">DigiKey / F1219CT-ND</a> | <a href="datasheets/Littelfuse-154.pdf">Local manufacturer documentation</a></p>
+<p>Checked 2026-11-03: 8,787 listed. Stocked listing screening only. Estimate: select 2-business-day service after vendor dispatch for ZIP 85212; confirm dated checkout arrival within 10 calendar days after order. No confirmed delivery date.</p>
+<p>Complete fuse-and-holder assembly; included holder 01550900M must not be purchased again. Exact specified 250 mA provision retained. Fuse coordination and clearing remain bench checks.</p>
+<h3 id="0154500dr">0154.500DR</h3>
+<p><a href="https://www.digikey.com/en/products/detail/littelfuse-inc/0154-500DR/183350">DigiKey / F1220CT-ND</a> | <a href="datasheets/Littelfuse-154.pdf">Local manufacturer documentation</a></p>
+<p>Checked 2026-11-03: 10,437 listed. Stocked listing screening only. Estimate: select 2-business-day service after vendor dispatch for ZIP 85212; confirm dated checkout arrival within 10 calendar days after order. No confirmed delivery date.</p>
+<p>One complete F2 fuse-and-holder assembly; included holder must not be bought again. F1/F2 are intentionally nonselective in Revision J; actual fault clearing remains pending.</p>
+<h3 id="1n5819-e354">1N5819-E3/54</h3>
+<p><a href="https://www.digikey.com/en/products/detail/vishay-general-semiconductor-diodes-division/1N5819-E3-54/1023531">DigiKey / 1N5819-E3/54GICT-ND</a> | <a href="datasheets/1N5819.pdf">Local manufacturer documentation</a></p>
+<p>Checked 2026-11-03: 17,842 listed. Stocked listing screening only. Estimate: select 2-business-day service after vendor dispatch for ZIP 85212; confirm dated checkout arrival within 10 calendar days after order. No confirmed delivery date.</p>
+<h3 id="381116-100">3811/16 100</h3>
+<p><a href="https://www.digikey.com/en/products/detail/3m/3811-16-100/22532483">DigiKey / 19-3811/16100-DS-ND</a> | <a href="https://multimedia.3m.com/mws/media/22071O/3m-tm-color-coded-flat-cbl-050-26-awg-stranded-pvc-3811-ts0122.pdf">Documentation link — local exact PDF unavailable</a></p>
+<p>Checked 2026-11-03: 79 listed. Stocked listing screening only. Estimate: select 2-business-day service after vendor dispatch for ZIP 85212; confirm dated checkout arrival within 10 calendar days after order. No confirmed delivery date.</p>
+<p>Purchase one foot (304.8 mm) of 16-conductor ribbon, not the 100-foot spool. Separate 13 conductors and cut each &lt;=150 mm; terminate both ends with the listed contacts. Remaining cable is unavoidable cut-length remainder, no spares allowance. Stranded tinned copper, 7/34, 26 AWG, 1.07 mm nominal insulation thickness/diameter. Verify crimp insulation grip and finished continuity.</p>
+<p>Manufacturer PDF verified through online reader; server denied local download. Local copy missing; use the linked manufacturer datasheet.</p>
+<h3 id="b3f-1000">B3F-1000</h3>
+<p><a href="https://www.digikey.com/en/products/detail/omron-electronics-inc-emc-div/B3F-1000/33150">DigiKey / SW400-ND</a> | <a href="datasheets/B3F.pdf">Local manufacturer documentation</a></p>
+<p>Checked 2026-11-03: 21,365 listed. Stocked listing screening only. Estimate: select 2-business-day service after vendor dispatch for ZIP 85212; confirm dated checkout arrival within 10 calendar days after order. No confirmed delivery date.</p>
+<h3 id="c0805c104k5ractu">C0805C104K5RACTU</h3>
+<p><a href="https://www.digikey.com/en/products/detail/kemet/C0805C104K5RACTU/411169">DigiKey / 399-C0805C104K5RACTUCT-ND</a> | <a href="datasheets/KEMET-X7R.pdf">Local manufacturer documentation</a></p>
+<p>Checked 2026-11-03: 7,280,270 listed. Stocked listing screening only. Estimate: select 2-business-day service after vendor dispatch for ZIP 85212; confirm dated checkout arrival within 10 calendar days after order. No confirmed delivery date.</p>
+<h3 id="c0805c334k3ractu">C0805C334K3RACTU</h3>
+<p><a href="https://www.digikey.com/en/products/detail/kemet/C0805C334K3RACTU/2212617">DigiKey / 399-C0805C334K3RACTUCT-ND</a> | <a href="datasheets/KEMET-X7R.pdf">Local manufacturer documentation</a></p>
+<p>Checked 2026-11-03: 61,407 listed. Stocked listing screening only. Estimate: select 2-business-day service after vendor dispatch for ZIP 85212; confirm dated checkout arrival within 10 calendar days after order. No confirmed delivery date.</p>
+<h3 id="dm164150">DM164150</h3>
+<p><a href="https://www.digikey.com/en/products/detail/microchip-technology/DM164150/11586705">DigiKey / 150-DM164150-ND</a> | <a href="datasheets/Nano-user-guide.pdf">Local manufacturer documentation</a></p>
+<p>Checked 2026-11-03: 114 listed. Stocked listing screening only. Estimate: select 2-business-day service after vendor dispatch for ZIP 85212; confirm dated checkout arrival within 10 calendar days after order. No confirmed delivery date.</p>
+<p>Include the complete development board at replacement cost. The course Nano setup guide describes two male-header strips included with the board; trim each to the 28 populated contacts required by this design. No extra male-header purchase is counted. USB programming cable is lab equipment and excluded.</p>
+<h3 id="ltst-c170krkt">LTST-C170KRKT</h3>
+<p><a href="https://www.digikey.com/en/products/detail/liteon/LTST-C170KRKT/386779">DigiKey / 160-1415-1-ND</a> | <a href="https://optoelectronics.liteon.com/upload/download/DS-22-99-0150/LTST-C170KRKT.pdf">Documentation link — local exact PDF unavailable</a></p>
+<p>Checked 2026-11-03: 382,575 listed. Stocked listing screening only. Estimate: select 2-business-day service after vendor dispatch for ZIP 85212; confirm dated checkout arrival within 10 calendar days after order. No confirmed delivery date.</p>
+<p>Red 0805 LED. Exact manufacturer datasheet was verified online, but its download endpoint did not yield a usable local PDF. The local Lite-On LED catalog provides the part and package data; retain the exact datasheet link for later download.</p>
+<h3 id="m20-1060800">M20-1060800</h3>
+<p><a href="https://www.digikey.com/en/products/detail/harwin-inc/M20-1060800/3728198">DigiKey / 952-2234-ND</a> | <a href="datasheets/Harwin-M20-106.pdf">Local manufacturer documentation</a></p>
+<p>Checked 2026-11-03: 4,866 listed. Stocked listing screening only. Estimate: select 2-business-day service after vendor dispatch for ZIP 85212; confirm dated checkout arrival within 10 calendar days after order. No confirmed delivery date.</p>
+<p>Four empty 8-position housings for both ends of J6/J7 LCD groups. Contacts purchased separately. 13 conductors only; omit LCD positions 3/15/16. J5 has no attached accessory harness or allocated external power load in Revision J. Mark pin 1 and verify wiring.</p>
+<h3 id="m20-1180046">M20-1180046</h3>
+<p><a href="https://www.digikey.com/en/products/detail/harwin-inc/M20-1180046/3728125">DigiKey / 952-2159-ND</a> | <a href="datasheets/Harwin-M20-118.pdf">Local manufacturer documentation</a></p>
+<p>Checked 2026-11-03: 61,171 listed. Stocked listing screening only. Estimate: select 2-business-day service after vendor dispatch for ZIP 85212; confirm dated checkout arrival within 10 calendar days after order. No confirmed delivery date.</p>
+<p>26 contacts: both ends of 13 LCD conductors, housed in four M20-1060800 housings. The 25-piece price tier applies to 26; contacts are each, not packs. No contacts in LCD positions 3, 15, 16.</p>
+<h3 id="m20-9990845">M20-9990845</h3>
+<p><a href="https://www.digikey.com/en/products/detail/harwin-inc/M20-9990845/3727965">DigiKey / 952-2000-ND</a> | <a href="datasheets/Harwin-M20-999.pdf">Local manufacturer documentation</a></p>
+<p>Checked 2026-11-03: 5,157 listed. Stocked listing screening only. Estimate: select 2-business-day service after vendor dispatch for ZIP 85212; confirm dated checkout arrival within 10 calendar days after order. No confirmed delivery date.</p>
+<p>Three 1x8 male board headers J5-J7. Four female LCD housings are listed separately for J6/J7 and LCD ends. J5 is spare GPIO, with no external power budget or attached cable required.</p>
+<h3 id="m20-9991645">M20-9991645</h3>
+<p><a href="https://www.digikey.com/en/products/detail/harwin-inc/M20-9991645/3921260">DigiKey / 952-3304-ND</a> | <a href="datasheets/Harwin-M20-999.pdf">Local manufacturer documentation</a></p>
+<p>Checked 2026-11-03: 1,383 listed. Stocked listing screening only. Estimate: select 2-business-day service after vendor dispatch for ZIP 85212; confirm dated checkout arrival within 10 calendar days after order. No confirmed delivery date.</p>
+<p>One separately purchased 1x16 header fitted to DS1. Verify soldering orientation and pin 1.</p>
+<h3 id="pj-002a">PJ-002A</h3>
+<p><a href="https://www.digikey.com/en/products/detail/same-sky-formerly-cui-devices/PJ-002A/96962">DigiKey / CP-002A-ND</a> | <a href="datasheets/PJ-002A.pdf">Local manufacturer documentation</a></p>
+<p>Checked 2026-11-03: 83,214 listed. Stocked listing screening only. Estimate: select 2-business-day service after vendor dispatch for ZIP 85212; confirm dated checkout arrival within 10 calendar days after order. No confirmed delivery date.</p>
+<p>Same Sky 2.0 mm center-pin PCB jack. Footprint requires plated slots. Confirm fabricator capability and physical fit; the selected adapter has a 5.5 x 2.1 mm center-positive plug.</p>
+<h3 id="pptc281lfbn-rc">PPTC281LFBN-RC</h3>
+<p><a href="https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPTC281LFBN-RC/810166">DigiKey / S7026-ND</a> | <a href="datasheets/Sullins-Sockets.pdf">Local manufacturer documentation</a></p>
+<p>Checked 2026-11-03: 1,046 listed. Stocked listing screening only. Estimate: select 2-business-day service after vendor dispatch for ZIP 85212; confirm dated checkout arrival within 10 calendar days after order. No confirmed delivery date.</p>
+<p>Two 1x28 female socket strips retained, 2.54 mm pitch, matching U1 15.24 mm row separation. Verify drill/tail fit, mating height and USB clearance.</p>
+<h3 id="rc1206fr-0710kl">RC1206FR-0710KL</h3>
+<p><a href="https://www.digikey.com/en/products/detail/yageo/RC1206FR-0710KL/728483">DigiKey / 311-10.0KFRCT-ND</a> | <a href="datasheets/Yageo-RC.pdf">Local manufacturer documentation</a></p>
+<p>Checked 2026-11-03: 1,568,116 listed. Stocked listing screening only. Estimate: select 2-business-day service after vendor dispatch for ZIP 85212; confirm dated checkout arrival within 10 calendar days after order. No confirmed delivery date.</p>
+<h3 id="rc1206fr-071kl">RC1206FR-071KL</h3>
+<p><a href="https://www.digikey.com/en/products/detail/yageo/RC1206FR-071KL/728387">DigiKey / 311-1.00KFRCT-ND</a> | <a href="datasheets/Yageo-RC.pdf">Local manufacturer documentation</a></p>
+<p>Checked 2026-11-03: 624,451 listed. Stocked listing screening only. Estimate: select 2-business-day service after vendor dispatch for ZIP 85212; confirm dated checkout arrival within 10 calendar days after order. No confirmed delivery date.</p>
+<h3 id="rc1206fr-072k2l">RC1206FR-072K2L</h3>
+<p><a href="https://www.digikey.com/en/products/detail/yageo/RC1206FR-072K2L/728624">DigiKey / 311-2.20KFRCT-ND</a> | <a href="datasheets/Yageo-RC.pdf">Local manufacturer documentation</a></p>
+<p>Checked 2026-11-03: 5 listed. Stocked listing screening only. Estimate: select 2-business-day service after vendor dispatch for ZIP 85212; confirm dated checkout arrival within 10 calendar days after order. No confirmed delivery date.</p>
+<p>Exact 2.2k, 1%, 0.25 W, 1206 retained. Prior stock snapshot was low; recheck available quantity and fulfillment before ordering.</p>
+<h3 id="rc1206fr-07470rl">RC1206FR-07470RL</h3>
+<p><a href="https://www.digikey.com/en/products/detail/yageo/RC1206FR-07470RL/728934">DigiKey / 311-470FRCT-ND</a> | <a href="datasheets/Yageo-RC.pdf">Local manufacturer documentation</a></p>
+<p>Checked 2026-11-03: 36,612 listed. Stocked listing screening only. Estimate: select 2-business-day service after vendor dispatch for ZIP 85212; confirm dated checkout arrival within 10 calendar days after order. No confirmed delivery date.</p>
+<p>R4 is the shared LCD R/W and DB0-DB3 pull-down in Revision J.</p>
+<h3 id="rc1206fr-0747kl">RC1206FR-0747KL</h3>
+<p><a href="https://www.digikey.com/en/products/detail/yageo/RC1206FR-0747KL/731878">DigiKey / 311-47.0KFRCT-ND</a> | <a href="datasheets/Yageo-RC.pdf">Local manufacturer documentation</a></p>
+<p>Checked 2026-11-03: 193,220 listed. Stocked listing screening only. Estimate: select 2-business-day service after vendor dispatch for ZIP 85212; confirm dated checkout arrival within 10 calendar days after order. No confirmed delivery date.</p>
+<h3 id="rc1206fr-074k7l">RC1206FR-074K7L</h3>
+<p><a href="https://www.digikey.com/en/products/detail/yageo/RC1206FR-074K7L/728887">DigiKey / 311-4.70KFRCT-ND</a> | <a href="datasheets/Yageo-RC.pdf">Local manufacturer documentation</a></p>
+<p>Checked 2026-11-03: 21,581 listed. Stocked listing screening only. Estimate: select 2-business-day service after vendor dispatch for ZIP 85212; confirm dated checkout arrival within 10 calendar days after order. No confirmed delivery date.</p>
+<h3 id="rc1206jr-070rl">RC1206JR-070RL</h3>
+<p><a href="https://www.digikey.com/en/products/detail/yageo/RC1206JR-070RL/732131">DigiKey / 311-0.0ERCT-ND</a> | <a href="datasheets/Yageo-RC.pdf">Local manufacturer documentation</a></p>
+<p>Checked 2026-11-03: 2,009,135 listed. Stocked listing screening only. Estimate: select 2-business-day service after vendor dispatch for ZIP 85212; confirm dated checkout arrival within 10 calendar days after order. No confirmed delivery date.</p>
+<p>Exact specified 0-ohm link retained, 1206, 0.25 W, 2 A. Export also says 1% tolerance; that is not a meaningful percentage for a zero-ohm jumper. Use the manufacturer maximum resistance/current specification rather than claim 1% accuracy.</p>
+<h3 id="sn74lvc1g17dbvr">SN74LVC1G17DBVR</h3>
+<p><a href="https://www.digikey.com/en/products/detail/texas-instruments/SN74LVC1G17DBVR/389051">DigiKey / 296-11933-1-ND</a> | <a href="datasheets/SN74LVC1G17.pdf">Local manufacturer documentation</a></p>
+<p>Checked 2026-11-03: 195,878 listed. Stocked listing screening only. Estimate: select 2-business-day service after vendor dispatch for ZIP 85212; confirm dated checkout arrival within 10 calendar days after order. No confirmed delivery date.</p>
+<h3 id="t350f226k016at">T350F226K016AT</h3>
+<p><a href="https://www.digikey.com/en/products/detail/kemet/T350F226K016AT/818435">DigiKey / 399-3574-ND</a> | <a href="datasheets/KEMET-T350.pdf">Local manufacturer documentation</a></p>
+<p>Checked 2026-11-03: 95 listed. Stocked listing screening only. Estimate: select 2-business-day service after vendor dispatch for ZIP 85212; confirm dated checkout arrival within 10 calendar days after order. No confirmed delivery date.</p>
+<p>C4 regulator output: 22 uF/16 V, +/-10%, 2.54 mm pitch. Observe polarity and verify installed LM1086 loop stability with the actual parallel capacitors and LCD harness.</p>
+<h3 id="t491a225k025at">T491A225K025AT</h3>
+<p><a href="https://www.digikey.com/en/products/detail/kemet/T491A225K025AT/3759239">DigiKey / 399-10122-1-ND</a> | <a href="datasheets/KEMET-T491.pdf">Local manufacturer documentation</a></p>
+<p>Checked 2026-11-03: 17,891 listed. Stocked listing screening only. Estimate: select 2-business-day service after vendor dispatch for ZIP 85212; confirm dated checkout arrival within 10 calendar days after order. No confirmed delivery date.</p>
+<p>C6: positive pad 1 to BUTTON_FILTERED. 3.2 x 1.6 mm, height &lt;=1.8 mm. Exact Revision J capacitor replaces former 1 uF X7R candidate; former C12 purchase hold is superseded. Revision J debounce/capacitance/leakage bench checks remain pending.</p>
+<h3 id="tst-104-01-g-d">TST-104-01-G-D</h3>
+<p><a href="https://www.digikey.com/en/products/detail/samtec-inc/TST-104-01-G-D/9497049">DigiKey / TST-104-01-G-D-ND</a> | <a href="datasheets/Samtec-TST.pdf">Local manufacturer documentation</a></p>
+<p>Checked 2026-11-03: 37 listed. Stocked listing screening only. Estimate: select 2-business-day service after vendor dispatch for ZIP 85212; confirm dated checkout arrival within 10 calendar days after order. No confirmed delivery date.</p>
+<p>Three 2x4 shrouded headers for the peer UART interfaces; three double-ended cables are listed separately. The peer boards supply their own corresponding headers.</p>
+<h3 id="wsu090-1300">WSU090-1300</h3>
+<p><a href="https://www.digikey.com/en/products/detail/triad-magnetics/WSU090-1300/3094977">DigiKey / 237-1451-ND</a> | <a href="datasheets/WSU090-1300.pdf">Local manufacturer documentation</a></p>
+<p>Checked 2026-11-03: 2,121 listed. Stocked listing screening only. Estimate: select 2-business-day service after vendor dispatch for ZIP 85212; confirm dated checkout arrival within 10 calendar days after order. No confirmed delivery date.</p>
+<p>Regulated 9 V, 1.3 A wall adapter, center-positive 5.5 x 2.1 mm plug. Compatible nominal mating size for PJ-002A; verify polarity and plug insertion fit physically.</p>
+<h3 id="idsd-04-d-0800-g">IDSD-04-D-08.00-G</h3>
+<p><a href="https://www.mouser.com/ProductDetail/Samtec/IDSD-04-D-08.00-G?qs=0lQeLiL1qyZIFjM6oRjn%252BA%3D%3D">Mouser / 200-IDSD04D0800G</a> | <a href="datasheets/Samtec-IDSD.pdf">Local manufacturer documentation</a></p>
+<p>Checked 2026-11-03: 35 listed. Stocked listing screening only. Estimate: select 2-business-day service after vendor dispatch for ZIP 85212; confirm dated checkout arrival within 10 calendar days after order. No confirmed delivery date.</p>
+<p>User approved the -G gray-cable version on November 2, 2026. Samtec identifies -G as gray cable; same 8-inch length, connector geometry and standard wiring as IDSD-04-D-08.00. Verify pin-1 orientation and end-to-end continuity before connection.</p>
+<h3 id="lm1086it-50nopb">LM1086IT-5.0/NOPB</h3>
+<p><a href="https://www.mouser.com/ProductDetail/Texas-Instruments/LM1086IT-5.0-NOPB?qs=sGAEpiMZZMug9GoBKXZ759%2FWxdjGb5obqWlryGQJdV0%3D">Mouser / 926-LM1086IT50NOPB</a> | <a href="datasheets/TI-LM1086.pdf">Local manufacturer documentation</a></p>
+<p>Checked 2026-11-03: 83 listed. Stocked listing screening only. Estimate: select 2-business-day service after vendor dispatch for ZIP 85212; confirm dated checkout arrival within 10 calendar days after order. No confirmed delivery date.</p>
+<p>Exact TI part retained. DigiKey direct stock was zero, 45 expected November 10, 2026, so Mouser selected. Pins 1 GND, 2 OUT, 3 IN; live tab is OUT. Installed thermal resistance &lt;=60 C/W or heatsink qualification required; no heatsink assumed until layout testing.</p>
+<h3 id="nhd-0216k1z-fsw-ftw-fb1">NHD-0216K1Z-FSW-FTW-FB1</h3>
+<p><a href="https://www.mouser.com/ProductDetail/Newhaven-Display/NHD-0216K1Z-FSW-FTW-FB1?qs=sGAEpiMZZMt7dcPGmvnkBpdHgMVhq5cu2av6HIr5mGo%3D">Mouser / 763-0216K1Z-FSWFTWFB</a> | <a href="datasheets/Newhaven-FB1.pdf">Local manufacturer documentation</a></p>
+<p>Checked 2026-11-03: 95 listed. Stocked listing screening only. Estimate: select 2-business-day service after vendor dispatch for ZIP 85212; confirm dated checkout arrival within 10 calendar days after order. No confirmed delivery date.</p>
+<p>Exact Revision J LCD retained. Mouser marks NRND; stock snapshot is 95 in the USD listing, other regional listings differ. Recheck before ordering. Pins 3/15/16 must remain unconnected; power and automatic backlight use pins 1/2. Header purchased separately; no package inclusion credited.</p>
+<h3 id="eeufr1e470">EEUFR1E470</h3>
+<p><a href="https://www.newark.com/panasonic/eeufr1e470/cap-alu-elec-47uf-25v-20/dp/92Y6310">Newark / 92Y6310</a> | <a href="datasheets/Panasonic-FR.pdf">Local manufacturer documentation</a></p>
+<p>Checked 2026-11-03: 2,294 listed. Published 4-6 business days from UK stock; normal-week estimate can fit 10 calendar days, but checkout arrival to 85212 is unconfirmed.</p>
+<p>Manufacturer writes EEUFR1E470; distributor aliases include EEU-FR1E470. Exact 47 uF, 25 V, 5 mm diameter, 2 mm pitch part retained. Newark lists UK stock with 4-6 business-day delivery; confirm ZIP-specific checkout ETA.</p>
+<h2 id="documentation-and-release-checks">Documentation and release checks</h2>
+<p>Exact local PDFs unavailable for: 3811/16 100, LTST-C170KRKT. The Lite-On catalog is included for the LED. Online manufacturer links remain available. Local 3M download was denied by its server.</p>
+<p><a href="datasheets/LiteOn-LED-Catalog.pdf">Lite-On LED catalog</a></p>
+<p>Hardware checks remain pending as recorded in the packaged Revision J qualification checklist. The PDF is a local preview; export the published website again for final submission.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../../02-Component-Selection/Component-Selection/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Component Selection">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Component Selection
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../04-Schematic/schematic/" class="md-footer__link md-footer__link--next" aria-label="Next: Schematic">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Schematic
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2025 team-name-here
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="/2025_fall" target="_blank" rel="noopener" title="2023 Site" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 464c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16h160v80c0 17.7 14.3 32 32 32h80v288c0 8.8-7.2 16-16 16H64zM64 0C28.7 0 0 28.7 0 64v384c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V154.5c0-17-6.7-33.3-18.7-45.3l-90.6-90.5C262.7 6.7 246.5 0 229.5 0H64zm97 289c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L79 303c-9.4 9.4-9.4 24.6 0 33.9l48 48c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-31-31 31-31zm96-34c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l31 31-31 31c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l48-48c9.4-9.4 9.4-24.6 0-33.9l-48-48z"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "toc.follow", "navigation.top", "navigation.path", "navigation.indexes", "navigation.prune", "content.action.edit", "navigation.footer"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

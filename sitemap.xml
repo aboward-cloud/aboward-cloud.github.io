@@ -16,6 +16,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://embedded-systems-design.github.io/EGR304DataSheetTemplate/03-BOM/BOM/</loc>
+         <lastmod>2026-11-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://embedded-systems-design.github.io/EGR304DataSheetTemplate/04-Schematic/schematic/</loc>
          <lastmod>2026-11-03</lastmod>
          <changefreq>daily</changefreq>
