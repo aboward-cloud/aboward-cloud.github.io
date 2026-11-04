@@ -1,91 +1,99 @@
 ---
-title: Bill of Materials — Revision J
+title: Bill of Materials — Revision J Through-Hole
 ---
 
-# Bill of Materials — Revision J
+# Bill of Materials — Revision J Through-Hole
 
-Zander Boward | Team 202 Weather Gadget | November 3, 2026
+Alexander Boward | Team 202 Weather Gadget | November 3, 2026
 
-**Component cost: $90.91**
+**Final DigiKey purchase-request estimate: $55.47** ($33.84 merchandise + $4.64 estimated tariffs + $16.99 shipping). This is the order estimate after excluding parts already available; it is separate from the full assembly replacement cost below. The request includes two of each fuse and ten 47 kOhm resistors; assembly quantities below are one of each fuse and five 47 kOhm resistors.
 
-Revision J basis: 67 schematic references (37 purchased items and 30 bare PCB pads), plus listed operating accessories. One assembly; no inventory credits, breadboard quantities or spares. Nano and LCD included at replacement cost.
+**Priced assembly/accessory subtotal: $86.86, plus unpriced stock parts and any additional LCD wiring hardware.** The JWCO capacitor and stock contrast resistor have no verified replacement price. Their cost is unknown, not zero; a complete replacement-cost total is pending.
 
-Pricing: published supplier USD listings checked November 3, 2026, at one-assembly quantities. Same prices in prototype and production columns. Round each extension to cents before summing. Tax, shipping and separately assessed tariffs are excluded; vendor-inclusive duties remain in published prices.
+One electrical assembly plus operating accessories. All original 67 schematic references are retained (37 fitted parts and 30 fabricated test pads), along with the accessories and added LCD contrast resistor. Both Nano socket strips and Nano/LCD replacement costs remain included. Through-hole parts replace the earlier surface-mount selections wherever selected in Revision-J_Through-Hole.
 
-Delivery: target ZIP 85212 within 10 calendar days after vendor order placement. Stock is a listing snapshot; 2-business-day transit after dispatch is an estimate, not a confirmed arrival. Newark lists 4-6 business days from UK stock. Confirm every dated ETA at checkout.
+Pricing basis: November 3 supplier records and final purchase sheet, USD. Prototype and production use the same one-assembly prices; each extension is rounded to cents. Full assembly prices exclude tax, shipping and separately assessed tariffs. The purchase request uses its actual order quantities and price breaks, so its merchandise subtotal differs from the assembly subtotal. No new stock or delivery check is implied by this update.
 
-Revision J: exact fixed-contrast FB1 LCD, LM1086IT-5.0/NOPB regulator, 22 uF output capacitor and 2.2 uF tantalum debounce capacitor. No trimmer, 3.3 V regulator, jumper headers or removable shunts. Reference numbering follows Revision J.
+Delivery target: ASU Polytechnic, ZIP 85212, within 10 calendar days after vendor order placement. Stock and transit estimates do not confirm an arrival date; check the dated ETA at checkout.
 
-Accessories: two 1x28 Nano sockets; one 1x16 LCD male header; four 1x8 female housings and 26 tin contacts; one foot of 26 AWG ribbon for 13 LCD conductors <=150 mm; three approved gray UART cables; one 9 V adapter. No J5 cable is required by the Revision J accessory list.
-
-LCD pins 3, 15, 16 stay unconnected. Supply path drop, live regulator tab/thermal performance, stability, debounce, fit and fault clearing remain hardware qualifications. Mouser marks exact LCD NRND. Ordered/date/received/surplus fields remain blank.
-
-30 bare copper test pads carry no separate component cost. PCB fabrication, enclosure, mounting hardware and assembly tooling/labor are excluded. Website/PDF are local previews; export published website for final rubric submission. See Sourcing-review.md and packaged source records.
-
-| Supplier | Subtotal |
+| Supplier / source | Priced assembly subtotal |
 |---|---:|
-| DigiKey | $60.35 |
-| Mouser | $30.07 |
-| Newark | $0.49 |
+| DigiKey | $67.96 |
+| Mouser reference pricing for already-available UART cables | $18.90 |
 | PCB features | $0.00 |
-| **Total** | **$90.91** |
+| **Known-price subtotal** | **$86.86** |
+| JWCO capacitor and stock contrast resistor | Unpriced |
 
 ## DigiKey
 
-| Part / description | Qty | Prototype unit | Prototype total | Production unit | Production total | References / accessory use |
+| Part / description | Qty per assembly | Prototype unit | Prototype total | Production unit | Production total | References / use |
 |---|---:|---:|---:|---:|---:|---|
-| [0154.250DR](https://www.digikey.com/en/products/detail/littelfuse-inc/0154-250DR/183349)<br>250 mA fast removable fuse + holder assembly | 1 | $4.84 | $4.84 | $4.84 | $4.84 | F1 |
-| [0154.500DR](https://www.digikey.com/en/products/detail/littelfuse-inc/0154-500DR/183350)<br>500 mA fast removable fuse + holder assembly | 1 | $4.84 | $4.84 | $4.84 | $4.84 | F2 |
+| [0251.250MXL](https://www.digikey.com/en/products/detail/littelfuse-inc/0251-250MXL/700699)<br>250mA,125VAC/DC fast axial solder-in fuse | 1 | $1.5 | $1.50 | $1.5 | $1.50 | F1 |
+| [0251.500MXL](https://www.digikey.com/en/products/detail/littelfuse-inc/0251-500MXL/700707)<br>500mA,125VAC/DC fast axial solder-in fuse | 1 | $1.37 | $1.37 | $1.37 | $1.37 | F2 |
 | [1N5819-E3/54](https://www.digikey.com/en/products/detail/vishay-general-semiconductor-diodes-division/1N5819-E3-54/1023531)<br>1N5819, 1 A, 40 V Schottky, DO-41 | 1 | $0.71 | $0.71 | $0.71 | $0.71 | D1 |
-| [3811/16 100](https://www.digikey.com/en/products/detail/3m/3811-16-100/22532483)<br>26 AWG stranded color-coded ribbon, purchase unit = one foot | 1 | $2.32 | $2.32 | $2.32 | $2.32 | LCD harness wire; one foot purchase unit (accessory) |
+| [3811/16 100](https://www.digikey.com/en/products/detail/3m/3811-16-100/22532483)<br>26 AWG stranded color-coded ribbon, purchase unit = one foot | 1 | $2.32 | $2.32 | $2.32 | $2.32 | LCD harness wire; one foot purchase unit |
 | [B3F-1000](https://www.digikey.com/en/products/detail/omron-electronics-inc-emc-div/B3F-1000/33150)<br>B3F-1000, SPST-NO tactile switch, 6x6 mm | 1 | $0.35 | $0.35 | $0.35 | $0.35 | SW1 |
-| [C0805C104K5RACTU](https://www.digikey.com/en/products/detail/kemet/C0805C104K5RACTU/411169)<br>100 nF, 50 V, X7R, 10%, 0805 | 3 | $0.18 | $0.54 | $0.18 | $0.54 | C3, C5, C7 |
-| [C0805C334K3RACTU](https://www.digikey.com/en/products/detail/kemet/C0805C334K3RACTU/2212617)<br>330 nF, 25 V, X7R, 10%, 0805 | 1 | $0.4 | $0.40 | $0.4 | $0.40 | C1 |
+| [C315C104K5R5TA](https://www.digikey.com/en/products/detail/kemet/C315C104K5R5TA/12701330)<br>100nF,50V,X7R,10%,radial2.54mm | 3 | $0.79 | $2.37 | $0.79 | $2.37 | C3, C5, C7 |
+| [C330C334K1R5TA](https://www.digikey.com/en/products/detail/kemet/C330C334K1R5TA/818183)<br>330nF,100V,X7R,10%,radial5.08mm | 1 | $1.86 | $1.86 | $1.86 | $1.86 | C1 |
 | [DM164150](https://www.digikey.com/en/products/detail/microchip-technology/DM164150/11586705)<br>PIC18F57Q43 Curiosity Nano development board | 1 | $10.61 | $10.61 | $10.61 | $10.61 | U1 |
-| [LTST-C170KRKT](https://www.digikey.com/en/products/detail/liteon/LTST-C170KRKT/386779)<br>Red LED, 0805 | 3 | $0.18 | $0.54 | $0.18 | $0.54 | D2, D3, D4 |
-| [M20-1060800](https://www.digikey.com/en/products/detail/harwin-inc/M20-1060800/3728198)<br>8-position single-row female cable housing, 2.54 mm pitch | 4 | $0.37 | $1.48 | $0.37 | $1.48 | J6/J7 to DS1: both ends of two groups (accessory) |
-| [M20-1180046](https://www.digikey.com/en/products/detail/harwin-inc/M20-1180046/3728125)<br>Loose tin crimp socket contacts, 22-30 AWG | 26 | $0.1092 | $2.84 | $0.1092 | $2.84 | LCD harness: 13 conductors, both ends (accessory) |
+| [M20-1060800](https://www.digikey.com/en/products/detail/harwin-inc/M20-1060800/3728198)<br>8-position single-row female cable housing, 2.54 mm pitch | 4 | $0.37 | $1.48 | $0.37 | $1.48 | J6/J7 to DS1: both ends of two groups |
+| [M20-1180046](https://www.digikey.com/en/products/detail/harwin-inc/M20-1180046/3728125)<br>Loose tin crimp socket contacts, 22-30 AWG | 26 | $0.1092 | $2.84 | $0.1092 | $2.84 | LCD harness: 13 conductors, both ends |
 | [M20-9990845](https://www.digikey.com/en/products/detail/harwin-inc/M20-9990845/3727965)<br>1x8 male header, 2.54 mm pitch | 3 | $0.37 | $1.11 | $0.37 | $1.11 | J5, J6, J7 |
-| [M20-9991645](https://www.digikey.com/en/products/detail/harwin-inc/M20-9991645/3921260)<br>16-position male LCD header, 2.54 mm pitch | 1 | $0.69 | $0.69 | $0.69 | $0.69 | DS1 LCD header (accessory) |
+| [M20-9991645](https://www.digikey.com/en/products/detail/harwin-inc/M20-9991645/3921260)<br>16-position male LCD header, 2.54 mm pitch | 1 | $0.69 | $0.69 | $0.69 | $0.69 | DS1 LCD header |
+| [MFR-25FBF52-10K](https://www.digikey.com/en/products/detail/yageo/MFR-25FBF52-10K/13219)<br>10K resistor,1%,0.25W axial metal film | 1 | $0.1 | $0.10 | $0.1 | $0.10 | R6 |
+| [MFR-25FBF52-1K](https://www.digikey.com/en/products/detail/yageo/MFR-25FBF52-1K/13011)<br>1K resistor,1%,0.25W axial metal film | 1 | $0.1 | $0.10 | $0.1 | $0.10 | R10 |
+| [MFR-25FBF52-470R](https://www.digikey.com/en/products/detail/yageo/MFR-25FBF52-470R/9138172)<br>470R resistor,1%,0.25W axial metal film | 1 | $0.11 | $0.11 | $0.11 | $0.11 | R4 |
+| [MFR-25FRF52-2K2](https://www.digikey.com/en/products/detail/yageo/MFR-25FRF52-2K2/9138953)<br>2K2 resistor,1%,0.25W axial metal film | 1 | $0.1 | $0.10 | $0.1 | $0.10 | R9 |
+| [MFR-25FRF52-47K](https://www.digikey.com/en/products/detail/yageo/MFR-25FRF52-47K/9139054)<br>47K resistor,1%,0.25W axial metal film | 5 | $0.1 | $0.50 | $0.1 | $0.50 | R1, R2, R3, R5, R7 |
+| [MFR-25FRF52-4K7](https://www.digikey.com/en/products/detail/yageo/MFR-25FRF52-4K7/9139057)<br>4K7 resistor,1%,0.25W axial metal film | 1 | $0.1 | $0.10 | $0.1 | $0.10 | R8 |
 | [PJ-002A](https://www.digikey.com/en/products/detail/same-sky-formerly-cui-devices/PJ-002A/96962)<br>DC barrel jack, PJ-002A, 2.0 mm center pin | 1 | $0.66 | $0.66 | $0.66 | $0.66 | J4 |
-| [PPTC281LFBN-RC](https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPTC281LFBN-RC/810166)<br>Nano female socket strip, 1x28, 2.54 mm pitch | 2 | $1.7 | $3.40 | $1.7 | $3.40 | U1: both Nano socket strips (accessory) |
-| [RC1206FR-0710KL](https://www.digikey.com/en/products/detail/yageo/RC1206FR-0710KL/728483)<br>10k ohm resistor, +/-1%, 0.25 W, 1206 | 1 | $0.1 | $0.10 | $0.1 | $0.10 | R6 |
-| [RC1206FR-071KL](https://www.digikey.com/en/products/detail/yageo/RC1206FR-071KL/728387)<br>1k ohm resistor, +/-1%, 0.25 W, 1206 | 1 | $0.1 | $0.10 | $0.1 | $0.10 | R10 |
-| [RC1206FR-072K2L](https://www.digikey.com/en/products/detail/yageo/RC1206FR-072K2L/728624)<br>2.2k ohm resistor, +/-1%, 0.25 W, 1206 | 1 | $0.1 | $0.10 | $0.1 | $0.10 | R9 |
-| [RC1206FR-07470RL](https://www.digikey.com/en/products/detail/yageo/RC1206FR-07470RL/728934)<br>470 ohm resistor, +/-1%, 0.25 W, 1206 | 1 | $0.1 | $0.10 | $0.1 | $0.10 | R4 |
-| [RC1206FR-0747KL](https://www.digikey.com/en/products/detail/yageo/RC1206FR-0747KL/731878)<br>47k ohm resistor, +/-1%, 0.25 W, 1206 | 5 | $0.1 | $0.50 | $0.1 | $0.50 | R1, R2, R3, R5, R7 |
-| [RC1206FR-074K7L](https://www.digikey.com/en/products/detail/yageo/RC1206FR-074K7L/728887)<br>4.7k resistor, 1206, 0.25 W, 1% | 1 | $0.1 | $0.10 | $0.1 | $0.10 | R8 |
-| [RC1206JR-070RL](https://www.digikey.com/en/products/detail/yageo/RC1206JR-070RL/732131)<br>0 ohm resistor, 1206, 0.25 W, 2 A jumper | 2 | $0.1 | $0.20 | $0.1 | $0.20 | R11, R12 |
-| [SN74LVC1G17DBVR](https://www.digikey.com/en/products/detail/texas-instruments/SN74LVC1G17DBVR/389051)<br>Schmitt buffer, SOT-23-5, SN74LVC1G17 | 1 | $0.15 | $0.15 | $0.15 | $0.15 | U3 |
+| [PPTC281LFBN-RC](https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPTC281LFBN-RC/810166)<br>Nano female socket strip, 1x28, 2.54 mm pitch | 2 | $1.7 | $3.40 | $1.7 | $3.40 | U1: both Nano socket strips |
+| [SN74AHC14N](https://www.digikey.com/en/products/detail/texas-instruments/SN74AHC14N/375979)<br>Hex Schmitt inverter,DIP14; two gates cascaded | 1 | $0.88 | $0.88 | $0.88 | $0.88 | U3 |
 | [T350F226K016AT](https://www.digikey.com/en/products/detail/kemet/T350F226K016AT/818435)<br>22 uF, 16 V tantalum, 10%, case F, 2.54 mm pitch | 1 | $4.76 | $4.76 | $4.76 | $4.76 | C4 |
-| [T491A225K025AT](https://www.digikey.com/en/products/detail/kemet/T491A225K025AT/3759239)<br>2.2 uF, 25 V, +/-10% polarized tantalum, A/3216 case | 1 | $0.63 | $0.63 | $0.63 | $0.63 | C6 |
 | [TST-104-01-G-D](https://www.digikey.com/en/products/detail/samtec-inc/TST-104-01-G-D/9497049)<br>Keyed shrouded 2x4 PCB header, 2.54 mm pitch | 3 | $3.21 | $9.63 | $3.21 | $9.63 | J1, J2, J3 |
-| [WSU090-1300](https://www.digikey.com/en/products/detail/triad-magnetics/WSU090-1300/3094977)<br>9 V, 1.3 A regulated adapter, center-positive 5.5x2.1 mm | 1 | $8.65 | $8.65 | $8.65 | $8.65 | J4: operating power adapter (accessory) |
+| [WP710A10ID](https://www.digikey.com/en/products/detail/kingbright/WP710A10ID/2769809)<br>Red diffused3mm LED,2.54mm pitch | 3 | $0.24 | $0.72 | $0.24 | $0.72 | D2, D3, D4 |
+| [WSU090-1300](https://www.digikey.com/en/products/detail/triad-magnetics/WSU090-1300/3094977)<br>9 V, 1.3 A regulated adapter, center-positive 5.5x2.1 mm | 1 | $8.65 | $8.65 | $8.65 | $8.65 | J4: operating power adapter |
+| [ZOR-25-R-52-0R](https://www.digikey.com/en/products/detail/yageo/ZOR-25-R-52-0R/14670488)<br>0 ohm axial jumper,10A at70C,<=10mOhm | 2 | $0.12 | $0.24 | $0.12 | $0.24 | R11, R12 |
+| [NHD-0216K1Z-FSW-FBW-L](https://www.digikey.com/en/products/detail/newhaven-display-intl/NHD-0216K1Z-FSW-FBW-L/1701185)<br>16x2 parallel LCD, 5 V logic, white backlight; external contrast/backlight wiring | 1 | $8.11 | $8.11 | $8.11 | $8.11 | DS1 |
+| [LM1086CT-5.0/NOPB](https://www.digikey.com/en/products/detail/texas-instruments/LM1086CT-5-0-NOPB/363572)<br>5 V, 1.5 A LDO, TO-220-3, commercial temperature grade | 1 | $2.44 | $2.44 | $2.44 | $2.44 | U2 |
+| [ECA-1EM470](https://www.digikey.com/en/products/detail/panasonic-industry/ECA-1EM470/245010)<br>47 uF, 25 V, 20%, aluminum electrolytic, 85 C, 5 mm diameter, 2 mm pitch | 1 | $0.25 | $0.25 | $0.25 | $0.25 | C2 |
 
-**Subtotal: $60.35**
+**Subtotal: $67.96**
 
-## Mouser
+## Already-available UART cables — replacement pricing
 
-| Part / description | Qty | Prototype unit | Prototype total | Production unit | Production total | References / accessory use |
+| Part / description | Qty per assembly | Prototype unit | Prototype total | Production unit | Production total | References / use |
 |---|---:|---:|---:|---:|---:|---|
-| [IDSD-04-D-08.00-G](https://www.mouser.com/ProductDetail/Samtec/IDSD-04-D-08.00-G?qs=0lQeLiL1qyZIFjM6oRjn%252BA%3D%3D)<br>8-contact 2x4 socket-to-socket IDC cable, 8 inch, gray, 2.54 mm connector pitch | 3 | $6.3 | $18.90 | $6.3 | $18.90 | J1-J3 UART interfaces (accessory) |
-| [LM1086IT-5.0/NOPB](https://www.mouser.com/ProductDetail/Texas-Instruments/LM1086IT-5.0-NOPB?qs=sGAEpiMZZMug9GoBKXZ759%2FWxdjGb5obqWlryGQJdV0%3D)<br>5 V, 1.5 A LDO regulator, TO-220-3 | 1 | $2.37 | $2.37 | $2.37 | $2.37 | U2 |
-| [NHD-0216K1Z-FSW-FTW-FB1](https://www.mouser.com/ProductDetail/Newhaven-Display/NHD-0216K1Z-FSW-FTW-FB1?qs=sGAEpiMZZMt7dcPGmvnkBpdHgMVhq5cu2av6HIr5mGo%3D)<br>16x2 parallel LCD, 5 V, fixed contrast and always-on white backlight | 1 | $8.8 | $8.80 | $8.8 | $8.80 | DS1 |
+| [IDSD-04-D-08.00-G](https://www.mouser.com/ProductDetail/Samtec/IDSD-04-D-08.00-G?qs=0lQeLiL1qyZIFjM6oRjn%252BA%3D%3D)<br>8-contact 2x4 socket-to-socket IDC cable, 8 inch, gray, 2.54 mm connector pitch | 3 | $6.3 | $18.90 | $6.3 | $18.90 | J1-J3 UART interfaces |
 
-**Subtotal: $30.07**
+**Subtotal: $18.90. No separate Mouser purchase request is planned.**
 
-## Newark
+## On-hand components without verified replacement prices
 
-| Part / description | Qty | Prototype unit | Prototype total | Production unit | Production total | References / accessory use |
+| Part / description | Qty per assembly | Prototype unit | Prototype total | Production unit | Production total | References / use |
 |---|---:|---:|---:|---:|---:|---|
-| [EEUFR1E470](https://www.newark.com/panasonic/eeufr1e470/cap-alu-elec-47uf-25v-20/dp/92Y6310)<br>47 uF, 25 V radial, 5 mm diameter, 2 mm pitch | 1 | $0.488 | $0.49 | $0.488 | $0.49 | C2 |
-
-**Subtotal: $0.49**
+| JWCO CH, body markings: -40/+105 C, 1706, 2.2 uF 50 V<br>Radial aluminum electrolytic; exact orderable MPN, tolerance and leakage unverified | 1 | TBD | TBD | TBD | TBD | C6; user-selected lab component |
+| 1 kOhm axial resistor from existing stock<br>Initial LCD contrast trial; exact manufacturer/tolerance unrecorded | 1 | TBD | TBD | TBD | TBD | LCD V0 (pin 3) to GND; no potentiometer |
 
 ## PCB features
 
-| Part / description | Qty | Prototype unit | Prototype total | Production unit | Production total | References / accessory use |
+| Part / description | Qty per assembly | Prototype unit | Prototype total | Production unit | Production total | References / use |
 |---|---:|---:|---:|---:|---:|---|
-| N/A - fabricated PCB feature<br>Bare copper test pads, 1.5 mm diameter; included in PCB fabrication | 30 | $0 | $0.00 | $0 | $0.00 | TP1, TP2, TP3, TP4, TP5, TP6, TP7, TP8, TP9, TP10, TP11, TP12, TP13, TP14, TP15, TP16, TP17, TP18, TP19, TP20, TP21, TP22, TP23, TP24, TP25, TP26, TP27, TP28, TP29, TP30 |
+| N/A - fabricated PCB feature<br>Bare copper test pads, 1.5 mm diameter; included in PCB fabrication | 30 | $0 | $0.00 | $0 | $0.00 | TP1, TP10, TP11, TP12, TP13, TP14, TP15, TP16, TP17, TP18, TP19, TP2, TP20, TP21, TP22, TP23, TP24, TP25, TP26, TP27, TP28, TP29, TP3, TP30, TP4, TP5, TP6, TP7, TP8, TP9 |
 
-**Subtotal: $0.00**
+## Assembly and selection notes
+
+- DS1 is now **NHD-0216K1Z-FSW-FBW-L**, replacing the fixed-contrast FB1 display. It needs a contrast connection on pin 3 and backlight connections on pins 15/16. The old instruction to leave these pins unconnected no longer applies. The 1 kOhm contrast resistor is a bench-test starting value; readability must be checked. Backlight current limiting and the final harness pinout/contact count still require confirmation. The 26-contact harness line is the earlier allowance, not a verified final count for the new display.
+- U2 is **LM1086CT-5.0/NOPB**, replacing LM1086IT-5.0/NOPB; C2 is **ECA-1EM470**, replacing EEUFR1E470. These are the parts on the final DigiKey request.
+- C6 uses the chosen **JWCO 2.2 uF 50 V** capacitor instead of the KEMET tantalum. Earlier calculated debounce timing for the KEMET part does not qualify the JWCO part; check button operation on the assembled board.
+- F1/F2 remain the specified 250 mA / 500 mA fast axial fuses. The found T500mAL250V slow-blow fuses and loose fuse holders are inventory, not approved substitutes for these selections.
+- D2-D4 retain the specified red LED replacement pricing; five red LEDs were found in the lab. Other collected components are not automatic substitutions. C3/C5/C7 and C4 retain the exact parts still present on the final purchase request.
+- The Nano, available connectors, cables and adapter remain in the full BOM even when omitted from the purchase request because already available. U3 is one SN74AHC14N DIP14 IC, using two cascaded inverters.
+- This update changes the website BOM only. The schematic and downloadable workbook/PDF may still contain the earlier LCD, regulator, C2 and C6 selections. Export the published webpage to PDF for the Canvas submission after reviewing it.
+
+## Documentation for changed parts
+
+- [TI LM1086 manufacturer datasheet](https://www.ti.com/lit/ds/symlink/lm1086.pdf)
+- [Newhaven NHD-0216K1Z-FSW-FBW-L datasheet](https://newhavendisplay.com/content/specs/NHD-0216K1Z-FSW-FBW-L.pdf)
+- [Panasonic M-series capacitor datasheet](https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/2452/ECA-xxM%20Series,TypeA.pdf)
+- JWCO CH exact manufacturer datasheet and orderable part number: unavailable; body markings recorded above.
