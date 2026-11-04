@@ -8,13 +8,8 @@ Alexander Boward | Team 202 Weather Gadget | November 3, 2026
 
 **Final DigiKey purchase-request estimate: $55.47** ($33.84 merchandise + $4.64 estimated tariffs + $16.99 shipping). This is the order estimate after excluding parts already available; it is separate from the full assembly replacement cost below. The request includes two of each fuse and ten 47 kOhm resistors; assembly quantities below are one of each fuse and five 47 kOhm resistors.
 
-**Priced assembly/accessory subtotal: $86.86, plus unpriced stock parts and any additional LCD wiring hardware.** The JWCO capacitor and stock contrast resistor have no verified replacement price. Their cost is unknown, not zero; a complete replacement-cost total is pending.
+**Priced assembly/accessory subtotal: $86.86, plus unpriced stock parts and any additional LCD wiring hardware.**
 
-One electrical assembly plus operating accessories. All original 67 schematic references are retained (37 fitted parts and 30 fabricated test pads), along with the accessories and added LCD contrast resistor. Both Nano socket strips and Nano/LCD replacement costs remain included. Through-hole parts replace the earlier surface-mount selections wherever selected in Revision-J_Through-Hole.
-
-Pricing basis: November 3 supplier records and final purchase sheet, USD. Prototype and production use the same one-assembly prices; each extension is rounded to cents. Full assembly prices exclude tax, shipping and separately assessed tariffs. The purchase request uses its actual order quantities and price breaks, so its merchandise subtotal differs from the assembly subtotal. No new stock or delivery check is implied by this update.
-
-Delivery target: ASU Polytechnic, ZIP 85212, within 10 calendar days after vendor order placement. Stock and transit estimates do not confirm an arrival date; check the dated ETA at checkout.
 
 | Supplier / source | Priced assembly subtotal |
 |---|---:|
