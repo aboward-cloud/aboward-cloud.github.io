@@ -6,7 +6,7 @@ title: Bill of Materials — Revision J Through-Hole
 
 Alexander Boward | Team 202 Weather Gadget | November 3, 2026
 
-**Final DigiKey purchase-request estimate:** $55.47 ($33.84 merchandise + $4.64 estimated tariffs + $16.99 shipping). This is the order estimate after excluding parts already available; it is separate from the full assembly replacement cost below. The request includes two of each fuse and ten 47 kOhm resistors; assembly quantities below are one of each fuse and five 47 kOhm resistors.
+**Final DigiKey purchase-request estimate:** 55.47 (33.84 merchandise + 4.64 estimated tariffs + 16.99 shipping). This is the order estimate after excluding parts already available; it is separate from the full assembly replacement cost below. The request includes two of each fuse and ten 47 kOhm resistors; assembly quantities below are one of each fuse and five 47 kOhm resistors.
 
 **Priced assembly/accessory subtotal: $86.86, plus unpriced stock parts and any additional LCD wiring hardware.**
 
